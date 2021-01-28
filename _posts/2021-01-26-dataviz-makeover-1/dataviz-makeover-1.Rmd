@@ -70,13 +70,21 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 
 # D. Step-by-step description of the Data Visualisation preparation
 
+<<<<<<< HEAD
 ### 1. Preparation of data source
+=======
+#### 1. Preparation of data source
+>>>>>>> c3a5aa41c2a635145df9fddcb671da3f8f2c583b
 
 * Download the Excel data *(7) Resident Labour Force Aged Fifteen Years and Over by Age and Sex, 2009 - 2019 (June)* from https://stats.mom.gov.sg/iMAS_Tables1/LabourForce/LabourForce_2019/mrsd_2019LabourForce_T7.xlsx
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/01 Table 7.png)
 
+<<<<<<< HEAD
 ### 2. Reformat the data in sheet T7_T using Microsoft Excel. 
+=======
+#### 2. Reformat the data in sheet T7_T using Microsoft Excel. 
+>>>>>>> c3a5aa41c2a635145df9fddcb671da3f8f2c583b
 * Select the entire sheet and Clear Formats
 * Delete Rows 1 to 4, 6, and 19
 * Cut cell B1 and past in cell D1
@@ -88,12 +96,20 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/02 Clean Data.png){width=60%}
 
+<<<<<<< HEAD
 ### 3. Importing to Tableau
+=======
+#### 3. Importing to Tableau
+>>>>>>> c3a5aa41c2a635145df9fddcb671da3f8f2c583b
 * Open up Tableau and import Cleaned Data.xlsx
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/03 Importing.png){width=60%}
 
+<<<<<<< HEAD
 ### 4. Visualising using bar chart
+=======
+#### 4. Visualising using bar chart
+>>>>>>> c3a5aa41c2a635145df9fddcb671da3f8f2c583b
 * On a new worksheet, drag and drop *Age Group* to Columns and *2009* and *2019* to Rows
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 1.png){width=50%}
@@ -123,7 +139,11 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 8.png){width=40%}
 
+<<<<<<< HEAD
 ### 5. Creating data table 
+=======
+#### 5. Creating data table 
+>>>>>>> c3a5aa41c2a635145df9fddcb671da3f8f2c583b
 
 * On a new worksheet, drag and drop *2009 Number* and *2019 Number* to Rows, and *Age Group* to Columns. Next, select **text tables** under **Show Me**
 
@@ -139,7 +159,11 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/05 Data Table 2.png)
 
+<<<<<<< HEAD
 ### 6. Creating Dashboard
+=======
+#### 6. Creating Dashboard
+>>>>>>> c3a5aa41c2a635145df9fddcb671da3f8f2c583b
 
 * On a new dashboard, drag and drop the Bar Chart into the centre area. Next, drag and drop the Data Table below the Bar Chart as shown
 
