@@ -161,7 +161,9 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 * On a new dashboard, drag and drop the Bar Chart into the centre area. Next, drag and drop the Data Table below the Bar Chart as shown
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/06 Dashboard 1.png)
+
 * Adjust the hide and width of the bar chart and data table so that the age groups of the table is aligned to the x-axis of the bar chart. Here, there is a need to fix the size of the dashboard as setting the size to Automatic will mess up the intended alignment between the bar chart and the data table.
+
 * Double-click on the title of the bar chart to amend the title, and include message that the author wants to convey
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/06 Dashboard 2.png)
