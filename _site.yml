@@ -1,7 +1,7 @@
 name: "blog"
-title: "IDEA"
+title: "Dylan's Data Analytics Blog"
 description: |
-  IDEA
+  Test
 output_dir: "_site"
 navbar:
   right:
