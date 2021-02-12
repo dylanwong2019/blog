@@ -35,8 +35,8 @@
   },
   {
     "path": "posts/welcome/",
-    "title": "Welcome to IDEA",
-    "description": "Welcome to our new blog, IDEA. We hope you enjoy \nreading what we have to say!",
+    "title": "Welcome to Dylan's Data Analytics Blog",
+    "description": "Welcome to my new blog. I hope you enjoy \nreading what I have to say!",
     "author": [
       {
         "name": "Dylan Wong",
@@ -47,7 +47,7 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-01-10T23:01:48+08:00",
-    "input_file": {}
+    "last_modified": "2021-02-12T13:07:01+08:00",
+    "input_file": "welcome.utf8.md"
   }
 ]
