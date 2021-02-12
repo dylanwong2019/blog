@@ -182,8 +182,9 @@ https://public.tableau.com/profile/dylan7338#!/vizhome/DatavizMakeover1_16118012
 
 From the data visualisation prepared, the following observation could be made:  
 
-1. The labour force participation rate in each age group aligns to the life milestones of general Singapore population. 
-* Age 15-19 has the lowest LFPR as most of the residents in this group are still schooling. The fact that there is a small number in this age group in the labour force could be due to the need to supplement household income, early drop out of school, or as part of vacation part-time work in June period. 
-* At Age 20-24, Singaporeans typically either pursue further study or join the work force after completing their tertiary education. This explains the spike in the LFPR of age 25-29 as many graduate from the universities.
+1. The labour force participation rate in each age group aligns to the life milestones of general Singapore population.
+
+    * Age 15-19 has the lowest LFPR as most of the residents in this group are still schooling. The fact that there is a small number in this age group in the labour force could be due to the need to supplement household income, early drop out of school, or as part of vacation part-time work in June period.
+    * At Age 20-24, Singaporeans typically either pursue further study or join the work force after completing their tertiary education. This explains the spike in the LFPR of age 25-29 as many graduate from the universities.
 2. The difference between the LFPR of age 50-54 and age groups 55 and over is rather drastic. This could be due to the 2007 - 2008 Global Financial Crisis where many employees were retrenched. Retrenchment at the age above 50 poses difficulties to those seeking reemployment. This resulted in the significant lower LFPR of age 55 and over in 2009.  
 3. The increase in LFPR of age group 55 and over from 2009 to 2019 could also be attributed to the aging population issue that Singapore is facing. Other reasons for later retirement could be due to the rise in the cost of living. 
