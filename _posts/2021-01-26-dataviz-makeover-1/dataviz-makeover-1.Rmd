@@ -1,16 +1,17 @@
 ---
 title: "Dataviz Makeover 1"
 description: |
-  An assignment on data visualisation critique, ways to improve and rework.
+  An assignment on data visualisation critique, and ways to improve and rework.
 author:
   - name: Dylan Wong
     url: https://www.linkedin.com/in/dylan-wong/
 date: 01-26-2021
 output:
     distill::distill_article:
+      toc: true
+      toc_depth: 3
     self_contained: false
-    toc: true
-    toc_depth: 3
+
 
 ---
 
@@ -28,7 +29,7 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 
 # A. Critiques
 
-### Clarity
+## Clarity
 
 1. The details highlighted in the write-up is not visualised clearly on the chart. While readers could manually calculate the changes of the sum of the multiple age groups across the 2 years, it would be more intuitive if the charts could convey the message intended by the author.
 2. The data table below the chart is useful in showing the difference in the percentages of resident labour force between the 2 years. However, just by looking at the line chart itself, readers would not be able to figure out the percentage value as the y-axis is not present.
@@ -38,7 +39,7 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 6. The title of the chart is clear but provides little details of what the chart is about.
 
 
-### Aesthetics
+## Aesthetics
 
 1. The colours of the data table matches that of the line chart. It helps readers to easily identify the corresponding line when they are referring to the data table.
 2. The 2 colours choice is not ideal and it does not allow readers to immediately notice the differences especially when the report was published in low resolution.
@@ -74,7 +75,7 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 # D. Step-by-step description of the Data Visualisation preparation
 
 
-### 1. Preparation of data source
+## 1. Preparation of data source
 
 
 * Download the Excel data *(7) Resident Labour Force Aged Fifteen Years and Over by Age and Sex, 2009 - 2019 (June)* from https://stats.mom.gov.sg/iMAS_Tables1/LabourForce/LabourForce_2019/mrsd_2019LabourForce_T7.xlsx
@@ -82,7 +83,7 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/01 Table 7.png)
 
 
-### 2. Reformat the data in sheet T7_T using Microsoft Excel. 
+## 2. Reformat the data in sheet T7_T using Microsoft Excel
 
 * Select the entire sheet and Clear Formats
 * Delete Rows 1 to 4, 6, and 19
@@ -96,7 +97,7 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/02 Clean Data.png){width=60%}
 
 
-### 3. Importing to Tableau
+## 3. Importing to Tableau
 
 
 * Open up Tableau and import Cleaned Data.xlsx
@@ -104,7 +105,7 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/03 Importing.png){width=60%}
 
 
-### 4. Visualising using bar chart
+## 4. Visualising using bar chart
 
 
 * On a new worksheet, drag and drop *Age Group* to Columns and *2009* and *2019* to Rows
@@ -137,7 +138,7 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 8.png){width=40%}
 
 
-### 5. Creating data table 
+## 5. Creating data table 
 
 
 * On a new worksheet, drag and drop *2009 Number* and *2019 Number* to Rows, and *Age Group* to Columns. Next, select **text tables** under **Show Me**
@@ -155,7 +156,7 @@ This assignment sets to critically assess the data visualisation of Resident Lab
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/05 Data Table 2.png)
 
 
-### 6. Creating Dashboard
+## 6. Creating Dashboard
 
 
 * On a new dashboard, drag and drop the Bar Chart into the centre area. Next, drag and drop the Data Table below the Bar Chart as shown
