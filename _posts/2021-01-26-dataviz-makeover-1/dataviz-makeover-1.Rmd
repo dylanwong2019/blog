@@ -2,7 +2,7 @@
 title: "DataViz Makeover 1"
 description: |
   An assignment on data visualisation critique, and ways to improve and rework.
-preview: posts/2021-01-26-dataviz-makeover-1/image/Tableau.png
+preview: /ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/Tableau.png
 author:
   - name: Dylan Wong
     url: https://www.linkedin.com/in/dylan-wong/

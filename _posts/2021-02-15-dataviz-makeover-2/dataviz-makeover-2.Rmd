@@ -2,7 +2,6 @@
 title: "DataViz Makeover 2"
 description: |
   An assignment on data visualisation critique, and ways to improve and rework.
-draft: true
 author:
   - name: Dylan Wong
     url: https://www.linkedin.com/in/dylan-wong/
