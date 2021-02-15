@@ -1,0 +1,42 @@
+---
+title: "DataViz Makeover 2"
+description: |
+  An assignment on data visualisation critique, and ways to improve and rework.
+author:
+  - name: Dylan Wong
+    url: https://www.linkedin.com/in/dylan-wong/
+date: 02-15-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Overview
+
+![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Overview.png)
+# A. Critiques
+
+# B. Proposed alternative Data Visualisation
+
+# C. Proposed Data Visualisation
+
+
+
+
+
+
+
+
+
+
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
