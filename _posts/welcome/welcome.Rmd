@@ -1,13 +1,13 @@
 ---
-title: "Welcome to Dylan's Data Analytics Blog"
+title: "Welcome to Dylan's DataViz Blog"
 description: |
   Welcome to my new blog. I hope you enjoy 
   reading what I have to say!
 author:
   - name: Dylan Wong 
     url: https://www.linkedin.com/in/dylan-wong/
-    affiliation: School of Information Systems, Singapore Management University
-    affiliation_url: https://www.smu.edu.sg/
+    affiliation: School of Computing and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg/master-it-business
 date: 01-10-2021
 output:
   distill::distill_article:

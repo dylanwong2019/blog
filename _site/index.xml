@@ -12,7 +12,7 @@
       <title>DataViz Makeover 1</title>
       <dc:creator>Dylan Wong</dc:creator>
       <link>https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1</link>
-      <description>An assignment on data visualisation critique, and ways to improve and rework.</description>
+      <description>This assignment sets to critically assess the data visualisation of Resident Labour by Age published by the Ministry of Manpower in the Labour Force in Singapore Advance Release 2019 report.</description>
       <guid>https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1</guid>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       <media:content url="https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1/./image/Tableau.png" medium="image" type="image/png" width="1563" height="1148"/>
@@ -27,7 +27,7 @@
       <media:content url="https://dylanwong.netlify.app/posts/2021-01-10-my-first-post/my-first-post_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="2304" height="1152"/>
     </item>
     <item>
-      <title>Welcome to Dylan's Data Analytics Blog</title>
+      <title>Welcome to Dylan's DataViz Blog</title>
       <dc:creator>Dylan Wong</dc:creator>
       <link>https://dylanwong.netlify.app/posts/welcome</link>
       <description>Welcome to my new blog. I hope you enjoy 
