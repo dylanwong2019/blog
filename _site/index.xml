@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Dylan's Data Visualisation Blog</title>
+    <link>https://dylanwong.netlify.app/</link>
+    <atom:link href="https://dylanwong.netlify.app/index.xml" rel="self" type="application/rss+xml"/>
+    <description>All about data visualisation
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>DataViz Makeover 1</title>
+      <dc:creator>Dylan Wong</dc:creator>
+      <link>https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1</link>
+      <description>An assignment on data visualisation critique, and ways to improve and rework.</description>
+      <guid>https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1</guid>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1/./image/Tableau.png" medium="image" type="image/png" width="1563" height="1148"/>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <dc:creator>Dylan Wong</dc:creator>
+      <link>https://dylanwong.netlify.app/posts/2021-01-10-my-first-post</link>
+      <description>A short description of the post.</description>
+      <guid>https://dylanwong.netlify.app/posts/2021-01-10-my-first-post</guid>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://dylanwong.netlify.app/posts/2021-01-10-my-first-post/my-first-post_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="2304" height="1152"/>
+    </item>
+    <item>
+      <title>Welcome to Dylan's Data Analytics Blog</title>
+      <dc:creator>Dylan Wong</dc:creator>
+      <link>https://dylanwong.netlify.app/posts/welcome</link>
+      <description>Welcome to my new blog. I hope you enjoy 
+reading what I have to say!</description>
+      <guid>https://dylanwong.netlify.app/posts/welcome</guid>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

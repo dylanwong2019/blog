@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://dylanwong.netlify.app/about.html</loc>
+    <lastmod>2021-01-10T22:55:10+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanwong.netlify.app/</loc>
+    <lastmod>2021-02-12T13:13:56+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1/</loc>
+    <lastmod>2021-02-18T03:01:54+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanwong.netlify.app/posts/2021-01-10-my-first-post/</loc>
+    <lastmod>2021-01-11T00:28:41+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanwong.netlify.app/posts/welcome/</loc>
+    <lastmod>2021-02-12T13:07:01+08:00</lastmod>
+  </url>
+</urlset>

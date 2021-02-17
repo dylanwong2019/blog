@@ -1,8 +1,9 @@
 name: "blog"
-title: "Dylan's Data Analytics Blog"
+title: "Dylan's Data Visualisation Blog"
 description: |
-  All about dada analytics
+  All about data visualisation
 output_dir: "_site"
+base_url: https://dylanwong.netlify.app/
 navbar:
   right:
     - text: "Home"
@@ -11,6 +12,8 @@ navbar:
       menu:
       - text: "DataViz Makeover 1"
         href: posts/2021-01-26-dataviz-makeover-1/index.html
+      - text: "DataViz Makeover 2"
+        href: posts/2021-02-15-dataviz-makeover-2/index.html
     - text: "Visual Analytics Project"
       href: vap.html
     - text: "About"

@@ -1,7 +1,7 @@
 ---
 title: "DataViz Makeover 2"
 description: |
-  An assignment on data visualisation critique, and ways to improve and rework.
+  A critique and proposed makeover of the data visualisation created by a research team to understand the willingness of the public on COVID-19 vaccination. The data used by the research team was obtained from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github https://github.com/YouGov-Data/covid-19-tracker
 draft: true
 author:
   - name: Dylan Wong
@@ -19,15 +19,25 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Overview
 
 ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Overview.png)
 
-# A. Critiques
+# 1.0 Critiques & Suggestions for Proposed Visualisation
 
 ## Clarity
 
+|No.|Critiques|Suggestions|
+|:-|:-----------|:-----------|
+|1|The title of the 100% stacked bar chart on the left is misleading as the visualisation does not show which country is more pro-vaccine clearly. Readers may not be able to understand intuitively what the surveyees were agreeing or disagreeing to.||
+|2| While it is pleasant that the right bar chart has been sorted in descending order to allow better reading experience, the order of the countries on the y-axis of both bar charts are not synchronised - the chart on the left is sorted alphabetically. Readers may be confused as to why the 2 charts are placed side by side, and they may second-guess whether the author is trying to make some sort of comparison.||
+|3|The right bar chart is essentially just the extraction of the percentage of "strongly agree", which has already been shown in the 100% stacked bar chart on the left. To achieve the same intent, the left bar chart could have been sorted  in descending order by the "Strongly agree", and with the "Strongly agree" bars aligned to the left - against the y-axis. Readers may be confused by the redundant chart created.||
+|4| 
+
+
 ## Aesthetics
+|No.|Critiques|Suggestions|
+|:-|:-----------|:-----------|
+
 
 # B. Proposed alternative Data Visualisation
 
