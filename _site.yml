@@ -1,5 +1,5 @@
 name: "blog"
-title: "Dylan's Data Visualisation Blog"
+title: "Dylan's DataViz Blog"
 description: |
   All about data visualisation
 output_dir: "_site"
