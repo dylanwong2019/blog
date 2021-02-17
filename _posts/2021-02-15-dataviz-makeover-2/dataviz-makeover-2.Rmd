@@ -16,6 +16,13 @@ output:
     self_contained: false
 ---
 
+<style>
+header {
+text-align: left
+}
+body {
+text-align: justify}
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -25,28 +32,39 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Overview.png)
 
-# A. Critiques & Suggestions for Proposed Visualisation
+# A. Critiques
 
 ## Clarity
 
-No.|Critiques|Suggestions
-:-|:-----------|:-----------
-|1|The title of the 100% stacked bar chart on the left is misleading as the visualisation does not show which country is more pro-vaccine clearly. Readers may not be able to understand intuitively what the surveyees were agreeing or disagreeing to.||
-|2| While it is pleasant that the right bar chart has been sorted in descending order to allow better reading experience, the order of the countries on the y-axis of both bar charts are not synchronised - the chart on the left is sorted alphabetically. Readers may be confused as to why the 2 charts are placed side by side, and they may second-guess whether the author is trying to make some sort of comparison.||
-|3|The right bar chart is essentially just the extraction of the percentage of "strongly agree", which has already been shown in the 100% stacked bar chart on the left. To achieve the same intent, the left bar chart could have been sorted  in descending order by the "Strongly agree", and with the "Strongly agree" bars aligned to the left - against the y-axis. Readers may be confused by the redundant chart created.||
-|4| 
+1. The title of the 100% stacked bar chart on the left is misleading as the visualisation does not show which country is more pro-vaccine clearly. Viewers may not be able to understand intuitively what the surveyees were agreeing or disagreeing to.
+1. While it is pleasant that the right bar chart has been sorted in descending order to allow better reading experience, the order of the countries on the y-axis of both bar charts are not synchronised - the chart on the left is sorted alphabetically. Viewers may be confused as to why the 2 charts are placed side by side, and they may second-guess whether the author is trying to make some sort of comparison.
+1. The right bar chart is essentially just the extraction of the percentage of "strongly agree", which has already been shown in the 100% stacked bar chart on the left. To achieve the same intent, the left bar chart could have been sorted  in descending order by the "Strongly agree", and with the "Strongly agree" bars aligned to the left - against the y-axis. Viewers may be confused by the redundant chart created.
+1. The confidence interval, which is the margin of error that tells reader how much the survey results would be reflective of the view of the overall population, is missing. Viewers should be kept informed
+1. The legend shows only "strongly agree" and "strongly disagree". It is up to Viewers' own interpretation of what the other 3 colours are referring to.
 
 
 ## Aesthetics
-|No.|Critiques|Suggestions|
-|:-|:-----------|:-----------|
+
+1. The word "vaccine" on the title of the left bar chart is misspelt as "vacinne" - not what Viewers would expect from the English standard of research scientists from Imperial College London.
+1. It is not clear what the legend title "Vac 1" is referring to.
+1. The colour scheme used helps Viewers to easily identify the different segments in the stacked bar chart. The colour choice could be further improved to provide more useful information. For example, the colour red usually denotes negative sentiment while green for positive sentiment. Therefore, the use of red for "not sure" and green for "strongly disagree" is not ideal.
+1. While it is a commendable effort to zoom in on the "strongly agree" with the bar chart on the right to allow the Viewers to understand the percentage of the survey population who strongly agree to vaccination, which explains the un-synchronised x-axis scale, it is unfortunate that the x-axis maximum bound ended abruptly at "60%". As a result, Viewers may not be able identify the percentage value for United Kingdom.
 
 
-# B. Proposed alternative Data Visualisation
+# B. Proposed Improvement and Alternative Data Visualisation
+
+## Clarity
+
+1. 
+
+## Aesthetics
+
+1. 
 
 # C. Proposed Data Visualisation
 
-
+No.|Critiques|Suggestions
+:-|:-----------|:-----------
 
 
 

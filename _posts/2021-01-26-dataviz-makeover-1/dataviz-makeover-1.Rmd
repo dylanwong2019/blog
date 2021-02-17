@@ -12,10 +12,21 @@ date: 01-26-2021
 output:
     distill::distill_article:
       toc: true
+      toc_float: true
       toc_depth: 3
       self_contained: false
 ---
 
+<style>
+toc {
+text-align: left
+}
+h1, h2, h3 {
+text-align: left
+}
+body {
+text-align: justify}
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -77,7 +88,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## 1. Preparation of data source
 
 
-* Download the Excel data *(7) Resident Labour Force Aged Fifteen Years and Over by Age and Sex, 2009 - 2019 (June)* from https://stats.mom.gov.sg/iMAS_Tables1/LabourForce/LabourForce_2019/mrsd_2019LabourForce_T7.xlsx
+* Download the Excel data *(7) Resident Labour Force Aged Fifteen Years and Over by Age and Sex, 2009 - 2019 (June)* from [MOM site](https://stats.mom.gov.sg/iMAS_Tables1/LabourForce/LabourForce_2019/mrsd_2019LabourForce_T7.xlsx).
 
 ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/01 Table 7.png)
 
