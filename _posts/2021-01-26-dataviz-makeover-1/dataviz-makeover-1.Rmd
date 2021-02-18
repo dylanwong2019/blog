@@ -184,7 +184,7 @@ knitr::opts_chunk$set(echo = FALSE)
 The final dashboard is as shown below, and could be access via the link provided.
 
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/Tableau.png){width=80%}
+![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/Tableau.png){width=100%}
 https://public.tableau.com/profile/dylan7338#!/vizhome/DatavizMakeover1_16118012680840/Dashboard1
 
 
