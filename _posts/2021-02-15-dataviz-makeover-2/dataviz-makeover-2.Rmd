@@ -113,7 +113,7 @@ knitr::opts_chunk$set(echo = FALSE)
     _vac_1_|If a Covid-19 vaccine were made available to me this week, I would definitely get it
     _vac2_1_|I am worried about getting COVID19
     _vac2_2_|I am worried about potential side effects of a COVID19 vaccine
-    _vac2_3_|I believe government health authorities in my country will provide me with an effective COVID19 vaccine|
+    _vac2_3_|I believe government health authorities in my country will provide me with an effective COVID19 vaccine
     _vac2_6_|If I do not get a COVID19 vaccine when it is available, I will regret it|
     _vac_3_|If a Covid-19 vaccine becomes available to me a year from now, I definitely intend to get it
     _employment_status_1_|Full time employment
@@ -153,7 +153,77 @@ knitr::opts_chunk$set(echo = FALSE)
     
     <center>![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Clean7.png)</center>
     
-## Loading of Data
+## 2. Loading of Data
+
+* Open up Tableau, click on *Text file* and locate the _Cleaned.csv_ file exported from Tableau Prep Builder
+
+     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/02 Loading.png){width=100%}
+
+* Minor clean up here before the visualisation
+
+    Hide away unnecessary columns, i.e. _employment_status_1_, _employment_status_2_, _employment_status_3_, _employment_status_4_, _employment_status_5_, _employment_status_6_, _employment_status_7_
+     
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/02 Hide.png){width=100%}
+     
+    Right-click on the Country column, and select *Aliases..*.
+    
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/02 Country.png)
+    
+    Edit the country names - removing ".cvs" and capitalising first letter
+    
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/02 Aliases.png)
+
+## 3. Creating Diverging Stacked Bar Chart
+
+* To create the diverging stacked bar chart, the vaccine related survey questions, i.e. _vac_1_, _vac2_1_, _vac2_2_, _vac2_3_, _vac2_6_, _vac_3_, are pivoted. Highlight the columns, right-click, and select *Pivot*. 
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Survey Questions.png)
+
+* Next, double-clock on the column names and change it to "Survey Questions" and "Score" as shown.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Score.png)
+    
+* Right-click on the _Survey Questions_ column and select *Aliases..*. Update the Value of the field names to the actual questions.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Vaccine Aliases.png)
+    
+* Similarly for _Score_, update the aliases.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Score Aliases.png)
+    
+* Create a calculated field to assign an integer value to each score and name is _Score Value_.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Score Value.png)
+
+* Create 7 other calculated fields using the formula shown:
+
+    Fields|Formula
+    :-|:----
+    Number of Records|1
+    Total Count|Total(SUM([Number of Records]))
+    Count Negative|IF [Score Value]<3 THEN 1 ELSEIF  [Score Value]=3 THEN 0.5 ELSE 0 END
+    Total Count Negative|TOTAL(SUM([Count Negative]))
+    Percentage|SUM([Number of Records])/[Total Count]
+    Gantt Start|-[Total Count Negative]/[Total Count]
+    Gantt Percent|PREVIOUS_VALUE([Gantt Start])+ZN(LOOKUP([Percentage],-1))
+    
+* Drag _Gantt Percent_ from the left panel into Columns _Country_ into Rows, and _Score Value_ into Detail
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging1.png)
+
+* From the dropdown menu of _Gantt Percent_, select *Compute Using* > *Score Value*
+  
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging2.png) 
+    
+* Next, change the chart type to Gantt Chart, drag from the left panel _Score Value_ into Color, and _Percentage_ into Size 
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging3.png) 
+    
+* Double-click on the color palette on the top right corner, and adjust the color appropriately.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging4.png) 
+    
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging5.png){width=100%}
 
 # E. Observations
 

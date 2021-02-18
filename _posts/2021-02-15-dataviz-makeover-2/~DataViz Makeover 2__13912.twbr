@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0114.0916                               -->
+<workbook source-build='2020.4.1 (20204.21.0114.0916)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Cleaned Data' inline='true' name='federated.0vewbdx1bcsyes183de941juurhs' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Cleaned Data' name='textscan.1vttp9507qu4zx12nwrv71ky24q6'>
+            <connection class='textscan' directory='C:/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/covid-19-tracker-master' filename='Cleaned Data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='string' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Vac2 1]' />
+            <value name='[Vac2 2]' />
+            <value name='[Vac2 3]' />
+            <value name='[Vac2 6]' />
+            <value name='[Vac 1]' />
+            <value name='[Vac 3]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[Cleaned Data.csv].[vac2_1]' />
+              <field name='[Cleaned Data.csv].[vac2_2]' />
+              <field name='[Cleaned Data.csv].[vac2_3]' />
+              <field name='[Cleaned Data.csv].[vac2_6]' />
+              <field name='[Cleaned Data.csv].[vac_1]' />
+              <field name='[Cleaned Data.csv].[vac_3]' />
+            </group>
+          </groups>
+          <relation connection='textscan.1vttp9507qu4zx12nwrv71ky24q6' name='Cleaned Data.csv' table='[Cleaned Data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_SG' separator=','>
+              <column datatype='integer' name='age' ordinal='0' />
+              <column datatype='string' name='Country' ordinal='1' />
+              <column datatype='string' name='employment_status' ordinal='2' />
+              <column datatype='string' name='employment_status_1' ordinal='3' />
+              <column datatype='string' name='employment_status_2' ordinal='4' />
+              <column datatype='string' name='employment_status_3' ordinal='5' />
+              <column datatype='string' name='employment_status_4' ordinal='6' />
+              <column datatype='string' name='employment_status_5' ordinal='7' />
+              <column datatype='string' name='employment_status_6' ordinal='8' />
+              <column datatype='string' name='employment_status_7' ordinal='9' />
+              <column datatype='string' name='gender' ordinal='10' />
+              <column datatype='integer' name='household_children' ordinal='11' />
+              <column datatype='string' name='household_size' ordinal='12' />
+              <column datatype='string' name='vac_1' ordinal='13' />
+              <column datatype='string' name='vac_3' ordinal='14' />
+              <column datatype='string' name='vac2_1' ordinal='15' />
+              <column datatype='string' name='vac2_2' ordinal='16' />
+              <column datatype='string' name='vac2_3' ordinal='17' />
+              <column datatype='string' name='vac2_6' ordinal='18' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='string' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Vac2 1]' />
+            <value name='[Vac2 2]' />
+            <value name='[Vac2 3]' />
+            <value name='[Vac2 6]' />
+            <value name='[Vac 1]' />
+            <value name='[Vac 3]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[Cleaned Data.csv].[vac2_1]' />
+              <field name='[Cleaned Data.csv].[vac2_2]' />
+              <field name='[Cleaned Data.csv].[vac2_3]' />
+              <field name='[Cleaned Data.csv].[vac2_6]' />
+              <field name='[Cleaned Data.csv].[vac_1]' />
+              <field name='[Cleaned Data.csv].[vac_3]' />
+            </group>
+          </groups>
+          <relation connection='textscan.1vttp9507qu4zx12nwrv71ky24q6' name='Cleaned Data.csv' table='[Cleaned Data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_SG' separator=','>
+              <column datatype='integer' name='age' ordinal='0' />
+              <column datatype='string' name='Country' ordinal='1' />
+              <column datatype='string' name='employment_status' ordinal='2' />
+              <column datatype='string' name='employment_status_1' ordinal='3' />
+              <column datatype='string' name='employment_status_2' ordinal='4' />
+              <column datatype='string' name='employment_status_3' ordinal='5' />
+              <column datatype='string' name='employment_status_4' ordinal='6' />
+              <column datatype='string' name='employment_status_5' ordinal='7' />
+              <column datatype='string' name='employment_status_6' ordinal='8' />
+              <column datatype='string' name='employment_status_7' ordinal='9' />
+              <column datatype='string' name='gender' ordinal='10' />
+              <column datatype='integer' name='household_children' ordinal='11' />
+              <column datatype='string' name='household_size' ordinal='12' />
+              <column datatype='string' name='vac_1' ordinal='13' />
+              <column datatype='string' name='vac_3' ordinal='14' />
+              <column datatype='string' name='vac2_1' ordinal='15' />
+              <column datatype='string' name='vac2_2' ordinal='16' />
+              <column datatype='string' name='vac2_3' ordinal='17' />
+              <column datatype='string' name='vac2_6' ordinal='18' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_SG&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_status]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>employment_status</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status_1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_status_1]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>employment_status_1</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status_2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_status_2]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>employment_status_2</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status_3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_status_3]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>employment_status_3</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status_4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_status_4]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>employment_status_4</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status_5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_status_5]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>employment_status_5</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status_6</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_status_6]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>employment_status_6</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status_7</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_status_7]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>employment_status_7</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>household_children</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[household_children]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>household_children</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>household_size</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[household_size]</local-name>
+            <parent-name>[Cleaned Data.csv]</parent-name>
+            <remote-alias>household_size</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Employment Status' datatype='string' name='[Calculation_978969981539762180]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [employment_status_1] = &quot;Yes&quot;&#13;&#10;OR [employment_status] = &quot;Full time employment&quot;&#13;&#10;THEN &quot;Full time employment&quot;&#13;&#10;ELSEIF [employment_status_2] = &quot;Yes&quot; &#13;&#10;OR [employment_status] = &quot;Part time employment&quot;&#13;&#10;THEN &quot;Part time employment&quot;&#13;&#10;ELSEIF [employment_status_3] = &quot;Yes&quot; &#13;&#10;OR [employment_status] = &quot;Full time student&quot;&#13;&#10;THEN &quot;Full time student&quot;&#13;&#10;ELSEIF [employment_status_4] = &quot;Yes&quot; &#13;&#10;OR [employment_status] = &quot;Retired&quot;&#13;&#10;THEN &quot;Retired&quot;&#13;&#10;ELSEIF [employment_status_5] = &quot;Yes&quot; &#13;&#10;OR [employment_status] = &quot;Unemployed&quot;&#13;&#10;THEN &quot;Unemployed&quot;&#13;&#10;ELSEIF [employment_status_6] = &quot;Yes&quot; &#13;&#10;OR [employment_status] = &quot;Not working&quot;&#13;&#10;THEN &quot;Not working&quot;&#13;&#10;ELSEIF [employment_status_7] = &quot;Yes&quot; &#13;&#10;OR [employment_status] = &quot;Other&quot;&#13;&#10;THEN &quot;Other&quot;&#13;&#10;ELSE &quot;Unknown&quot; &#13;&#10;END' />
+      </column>
+      <column aggregation='Sum' caption='Score Value' datatype='integer' name='[Calculation_978969981552828422]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IF [Pivot Field Values]= &quot;1 - Strongly agree&quot; THEN 5&#13;&#10;ELSEIF  [Pivot Field Values] = &quot;2&quot; THEN 4&#13;&#10;ELSEIF  [Pivot Field Values] =  &quot;3&quot; THEN 3&#13;&#10;ELSEIF  [Pivot Field Values] =  &quot;4&quot; THEN 2&#13;&#10;ELSE 1&#13;&#10;END' />
+      </column>
+      <column caption='Number of Records' datatype='integer' name='[Calculation_978969981555470343]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Count Negative' datatype='real' name='[Calculation_978969981557452809]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_978969981552828422] &lt;3 THEN 1 &#13;&#10;ELSEIF  [Calculation_978969981552828422] =3 THEN 0.5 &#13;&#10;ELSE 0 END' />
+      </column>
+      <column caption='Total Count Negative' datatype='real' name='[Calculation_978969981557936138]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='TOTAL(SUM([Calculation_978969981557452809]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Total Count' datatype='integer' name='[Calculation_978969981558747148]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='TOTAL(SUM([Calculation_978969981555470343]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Percentage' datatype='real' name='[Calculation_978969981558968333]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_978969981555470343])/[Calculation_978969981558747148]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Gantt Start' datatype='real' name='[Calculation_978969981559070734]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='-[Calculation_978969981557936138]/[Calculation_978969981558747148]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Gantt Percent' datatype='real' name='[Calculation_978969981559185423]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='PREVIOUS_VALUE([Calculation_978969981559070734])+ZN(LOOKUP([Calculation_978969981558968333],-1))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <aliases>
+          <alias key='&quot;australia.csv&quot;' value='Australia' />
+          <alias key='&quot;canada.csv&quot;' value='Canada' />
+          <alias key='&quot;denmark.csv&quot;' value='Denmark' />
+          <alias key='&quot;finland.csv&quot;' value='Finland' />
+          <alias key='&quot;france.csv&quot;' value='France' />
+          <alias key='&quot;germany.csv&quot;' value='Germany' />
+          <alias key='&quot;israel.csv&quot;' value='Israel' />
+          <alias key='&quot;italy.csv&quot;' value='Italy' />
+          <alias key='&quot;japan.csv&quot;' value='Japan' />
+          <alias key='&quot;netherlands.csv&quot;' value='Netherlands' />
+          <alias key='&quot;norway.csv&quot;' value='Norway' />
+          <alias key='&quot;singapore.csv&quot;' value='Singapore' />
+          <alias key='&quot;south-korea.csv&quot;' value='Soutth Korea' />
+          <alias key='&quot;spain.csv&quot;' value='Spain' />
+          <alias key='&quot;sweden.csv&quot;' value='Sweden' />
+          <alias key='&quot;united-kingdom.csv&quot;' value='United Kingdom' />
+        </aliases>
+      </column>
+      <column caption='Survey Questions' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Vac 1&quot;' value='If a Covid-19 vaccine were made available to me this week, I would definitely get it' />
+          <alias key='&quot;Vac 3&quot;' value='If a Covid-19 vaccine becomes available to me a year from now, I definitely intend to get it' />
+          <alias key='&quot;Vac2 1&quot;' value='I am worried about getting COVID19' />
+          <alias key='&quot;Vac2 2&quot;' value='I am worried about potential side effects of a COVID19 vaccine' />
+          <alias key='&quot;Vac2 3&quot;' value='I believe government health authorities in my country will provide me with an effective COVID19 vaccine' />
+          <alias key='&quot;Vac2 6&quot;' value='If I do not get a COVID19 vaccine when it is available, I will regret it|' />
+        </aliases>
+      </column>
+      <column caption='Score' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;1 - Strongly agree&quot;' value='Strongly Agree' />
+          <alias key='&quot;2&quot;' value='Agree' />
+          <alias key='&quot;3&quot;' value='Neutral' />
+          <alias key='&quot;4&quot;' value='Disagree' />
+          <alias key='&quot;5 – Strongly disagree&quot;' value='Strongly Disagree' />
+        </aliases>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Cleaned Data.csv' datatype='table' name='[__tableau_internal_object_id__].[Cleaned Data.csv_DD67F99BD62748A2911627DD0B72CC78]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Employment_Status' datatype='string' hidden='true' name='[employment_status]' role='dimension' type='nominal' />
+      <column caption='Employment Status 1' datatype='string' hidden='true' name='[employment_status_1]' role='dimension' type='nominal' />
+      <column caption='Employment Status 2' datatype='string' hidden='true' name='[employment_status_2]' role='dimension' type='nominal' />
+      <column caption='Employment Status 3' datatype='string' hidden='true' name='[employment_status_3]' role='dimension' type='nominal' />
+      <column caption='Employment Status 4' datatype='string' hidden='true' name='[employment_status_4]' role='dimension' type='nominal' />
+      <column caption='Employment Status 5' datatype='string' hidden='true' name='[employment_status_5]' role='dimension' type='nominal' />
+      <column caption='Employment Status 6' datatype='string' hidden='true' name='[employment_status_6]' role='dimension' type='nominal' />
+      <column caption='Employment Status 7' datatype='string' hidden='true' name='[employment_status_7]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Household Children' datatype='integer' name='[household_children]' role='dimension' type='ordinal' />
+      <column caption='Household Size' datatype='string' name='[household_size]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='%null%' value='Unknown' />
+        </aliases>
+      </column>
+      <column-instance column='[Calculation_978969981552828422]' derivation='None' name='[none:Calculation_978969981552828422:ok]' pivot='key' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_978969981552828422:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#6ba8e5'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#d4c9c4'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>2</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Singapore&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Cleaned Data.csv' id='Cleaned Data.csv_DD67F99BD62748A2911627DD0B72CC78'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='string' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[Vac2 1]' />
+                  <value name='[Vac2 2]' />
+                  <value name='[Vac2 3]' />
+                  <value name='[Vac2 6]' />
+                  <value name='[Vac 1]' />
+                  <value name='[Vac 3]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[Cleaned Data.csv].[vac2_1]' />
+                    <field name='[Cleaned Data.csv].[vac2_2]' />
+                    <field name='[Cleaned Data.csv].[vac2_3]' />
+                    <field name='[Cleaned Data.csv].[vac2_6]' />
+                    <field name='[Cleaned Data.csv].[vac_1]' />
+                    <field name='[Cleaned Data.csv].[vac_3]' />
+                  </group>
+                </groups>
+                <relation connection='textscan.1vttp9507qu4zx12nwrv71ky24q6' name='Cleaned Data.csv' table='[Cleaned Data#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_SG' separator=','>
+                    <column datatype='integer' name='age' ordinal='0' />
+                    <column datatype='string' name='Country' ordinal='1' />
+                    <column datatype='string' name='employment_status' ordinal='2' />
+                    <column datatype='string' name='employment_status_1' ordinal='3' />
+                    <column datatype='string' name='employment_status_2' ordinal='4' />
+                    <column datatype='string' name='employment_status_3' ordinal='5' />
+                    <column datatype='string' name='employment_status_4' ordinal='6' />
+                    <column datatype='string' name='employment_status_5' ordinal='7' />
+                    <column datatype='string' name='employment_status_6' ordinal='8' />
+                    <column datatype='string' name='employment_status_7' ordinal='9' />
+                    <column datatype='string' name='gender' ordinal='10' />
+                    <column datatype='integer' name='household_children' ordinal='11' />
+                    <column datatype='string' name='household_size' ordinal='12' />
+                    <column datatype='string' name='vac_1' ordinal='13' />
+                    <column datatype='string' name='vac_3' ordinal='14' />
+                    <column datatype='string' name='vac2_1' ordinal='15' />
+                    <column datatype='string' name='vac2_2' ordinal='16' />
+                    <column datatype='string' name='vac2_3' ordinal='17' />
+                    <column datatype='string' name='vac2_6' ordinal='18' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cleaned Data' name='federated.0vewbdx1bcsyes183de941juurhs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vewbdx1bcsyes183de941juurhs'>
+            <column aggregation='Sum' caption='Score Value' datatype='integer' name='[Calculation_978969981552828422]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Pivot Field Values]= &quot;1 - Strongly agree&quot; THEN 5&#13;&#10;ELSEIF  [Pivot Field Values] = &quot;2&quot; THEN 4&#13;&#10;ELSEIF  [Pivot Field Values] =  &quot;3&quot; THEN 3&#13;&#10;ELSEIF  [Pivot Field Values] =  &quot;4&quot; THEN 2&#13;&#10;ELSE 1&#13;&#10;END' />
+            </column>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_978969981555470343]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Count Negative' datatype='real' name='[Calculation_978969981557452809]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_978969981552828422] &lt;3 THEN 1 &#13;&#10;ELSEIF  [Calculation_978969981552828422] =3 THEN 0.5 &#13;&#10;ELSE 0 END' />
+            </column>
+            <column caption='Total Count Negative' datatype='real' name='[Calculation_978969981557936138]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='TOTAL(SUM([Calculation_978969981557452809]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Total Count' datatype='integer' name='[Calculation_978969981558747148]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='TOTAL(SUM([Calculation_978969981555470343]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Percentage' datatype='real' name='[Calculation_978969981558968333]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_978969981555470343])/[Calculation_978969981558747148]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Gantt Start' datatype='real' name='[Calculation_978969981559070734]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='-[Calculation_978969981557936138]/[Calculation_978969981558747148]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Gantt Percent' datatype='real' name='[Calculation_978969981559185423]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='PREVIOUS_VALUE([Calculation_978969981559070734])+ZN(LOOKUP([Calculation_978969981558968333],-1))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <aliases>
+                <alias key='&quot;australia.csv&quot;' value='Australia' />
+                <alias key='&quot;canada.csv&quot;' value='Canada' />
+                <alias key='&quot;denmark.csv&quot;' value='Denmark' />
+                <alias key='&quot;finland.csv&quot;' value='Finland' />
+                <alias key='&quot;france.csv&quot;' value='France' />
+                <alias key='&quot;germany.csv&quot;' value='Germany' />
+                <alias key='&quot;israel.csv&quot;' value='Israel' />
+                <alias key='&quot;italy.csv&quot;' value='Italy' />
+                <alias key='&quot;japan.csv&quot;' value='Japan' />
+                <alias key='&quot;netherlands.csv&quot;' value='Netherlands' />
+                <alias key='&quot;norway.csv&quot;' value='Norway' />
+                <alias key='&quot;singapore.csv&quot;' value='Singapore' />
+                <alias key='&quot;south-korea.csv&quot;' value='Soutth Korea' />
+                <alias key='&quot;spain.csv&quot;' value='Spain' />
+                <alias key='&quot;sweden.csv&quot;' value='Sweden' />
+                <alias key='&quot;united-kingdom.csv&quot;' value='United Kingdom' />
+              </aliases>
+            </column>
+            <column caption='Score' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;1 - Strongly agree&quot;' value='Strongly Agree' />
+                <alias key='&quot;2&quot;' value='Agree' />
+                <alias key='&quot;3&quot;' value='Neutral' />
+                <alias key='&quot;4&quot;' value='Disagree' />
+                <alias key='&quot;5 – Strongly disagree&quot;' value='Strongly Disagree' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_978969981552828422]' derivation='None' name='[none:Calculation_978969981552828422:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_978969981558968333]' derivation='User' name='[usr:Calculation_978969981558968333:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981552828422]' ordering-type='Field' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981558747148]' ordering-field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981552828422]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_978969981559185423]' derivation='User' name='[usr:Calculation_978969981559185423:qk:3]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981552828422]' ordering-type='Field' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981559070734]' ordering-field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981552828422]' ordering-type='Field' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981557936138]' ordering-field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981552828422]' ordering-type='Field' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981558747148]' ordering-field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981552828422]' ordering-type='Field' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981558968333]' ordering-field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981552828422]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[federated.0vewbdx1bcsyes183de941juurhs].[none:Calculation_978969981552828422:ok]' />
+              <size column='[federated.0vewbdx1bcsyes183de941juurhs].[usr:Calculation_978969981558968333:qk:2]' />
+              <lod column='[federated.0vewbdx1bcsyes183de941juurhs].[none:Calculation_978969981552828422:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vewbdx1bcsyes183de941juurhs].[none:Country:nk]</rows>
+        <cols>[federated.0vewbdx1bcsyes183de941juurhs].[usr:Calculation_978969981559185423:qk:3]</cols>
+      </table>
+      <simple-id uuid='{1549870E-D6DB-45E1-B09D-A035E3B079B6}' />
+    </worksheet>
+    <worksheet name='Sheet 1 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cleaned Data' name='federated.0vewbdx1bcsyes183de941juurhs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vewbdx1bcsyes183de941juurhs'>
+            <column aggregation='Sum' caption='Score Value' datatype='integer' name='[Calculation_978969981552828422]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Pivot Field Values]= &quot;1 - Strongly agree&quot; THEN 5&#13;&#10;ELSEIF  [Pivot Field Values] = &quot;2&quot; THEN 4&#13;&#10;ELSEIF  [Pivot Field Values] =  &quot;3&quot; THEN 3&#13;&#10;ELSEIF  [Pivot Field Values] =  &quot;4&quot; THEN 2&#13;&#10;ELSE 1&#13;&#10;END' />
+            </column>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_978969981555470343]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Count Negative' datatype='real' name='[Calculation_978969981557452809]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_978969981552828422] &lt;3 THEN 1 &#13;&#10;ELSEIF  [Calculation_978969981552828422] =3 THEN 0.5 &#13;&#10;ELSE 0 END' />
+            </column>
+            <column caption='Total Count Negative' datatype='real' name='[Calculation_978969981557936138]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='TOTAL(SUM([Calculation_978969981557452809]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Total Count' datatype='integer' name='[Calculation_978969981558747148]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='TOTAL(SUM([Calculation_978969981555470343]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Percentage' datatype='real' name='[Calculation_978969981558968333]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_978969981555470343])/[Calculation_978969981558747148]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Gantt Start' datatype='real' name='[Calculation_978969981559070734]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='-[Calculation_978969981557936138]/[Calculation_978969981558747148]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Gantt Percent' datatype='real' name='[Calculation_978969981559185423]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='PREVIOUS_VALUE([Calculation_978969981559070734])+ZN(LOOKUP([Calculation_978969981558968333],-1))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Survey Questions' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Vac 1&quot;' value='If a Covid-19 vaccine were made available to me this week, I would definitely get it' />
+                <alias key='&quot;Vac 3&quot;' value='If a Covid-19 vaccine becomes available to me a year from now, I definitely intend to get it' />
+                <alias key='&quot;Vac2 1&quot;' value='I am worried about getting COVID19' />
+                <alias key='&quot;Vac2 2&quot;' value='I am worried about potential side effects of a COVID19 vaccine' />
+                <alias key='&quot;Vac2 3&quot;' value='I believe government health authorities in my country will provide me with an effective COVID19 vaccine' />
+                <alias key='&quot;Vac2 6&quot;' value='If I do not get a COVID19 vaccine when it is available, I will regret it|' />
+              </aliases>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='Cleaned Data.csv' datatype='integer' name='[__tableau_internal_object_id__].[Cleaned Data.csv_DD67F99BD62748A2911627DD0B72CC78]' role='measure' type='quantitative' />
+            <column caption='Score' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;1 - Strongly agree&quot;' value='Strongly Agree' />
+                <alias key='&quot;2&quot;' value='Agree' />
+                <alias key='&quot;3&quot;' value='Neutral' />
+                <alias key='&quot;4&quot;' value='Disagree' />
+                <alias key='&quot;5 – Strongly disagree&quot;' value='Strongly Disagree' />
+              </aliases>
+            </column>
+            <_.fcp.ObjectModelTableType.true...column caption='Cleaned Data.csv' datatype='table' name='[__tableau_internal_object_id__].[Cleaned Data.csv_DD67F99BD62748A2911627DD0B72CC78]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Cleaned Data.csv_DD67F99BD62748A2911627DD0B72CC78]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Cleaned Data.csv_DD67F99BD62748A2911627DD0B72CC78:qk]' pivot='key' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_978969981555470343]' derivation='Sum' name='[sum:Calculation_978969981555470343:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_978969981557452809]' derivation='Sum' name='[sum:Calculation_978969981557452809:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[age]' derivation='Sum' name='[sum:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_978969981557936138]' derivation='User' name='[usr:Calculation_978969981557936138:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_978969981558747148]' derivation='User' name='[usr:Calculation_978969981558747148:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_978969981558968333]' derivation='User' name='[usr:Calculation_978969981558968333:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981558747148]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_978969981559070734]' derivation='User' name='[usr:Calculation_978969981559070734:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981557936138]' ordering-type='Rows' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981558747148]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_978969981559185423]' derivation='User' name='[usr:Calculation_978969981559185423:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981559070734]' ordering-type='Rows' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981557936138]' ordering-type='Rows' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981558747148]' ordering-type='Rows' />
+              <table-calc field='[federated.0vewbdx1bcsyes183de941juurhs].[Calculation_978969981558968333]' ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0vewbdx1bcsyes183de941juurhs].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vewbdx1bcsyes183de941juurhs].[none:Pivot Field Names:nk]</rows>
+        <cols>[federated.0vewbdx1bcsyes183de941juurhs].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{763ACCDA-A412-4143-A170-3F4F3E335A4F}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0vewbdx1bcsyes183de941juurhs].[none:Calculation_978969981552828422:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{BF0B0244-EFD5-4327-B97D-510498812B75}' />
+    </window>
+    <window class='worksheet' name='Sheet 1 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='30'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D25810EF-C8B4-4548-9797-1133E53CB8FE}' />
+    </window>
+  </windows>
+</workbook>
