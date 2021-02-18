@@ -90,7 +90,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * Download the Excel data *(7) Resident Labour Force Aged Fifteen Years and Over by Age and Sex, 2009 - 2019 (June)* from [MOM site](https://stats.mom.gov.sg/iMAS_Tables1/LabourForce/LabourForce_2019/mrsd_2019LabourForce_T7.xlsx).
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/01 Table 7.png)
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/01 Table 7.png){width=100%}
 
 
 ## 2. Reformat the data in sheet T7_T using Microsoft Excel
@@ -104,7 +104,7 @@ knitr::opts_chunk$set(echo = FALSE)
 * Find and replace the spacing in the data under Column A, and rename "70 & Over" as ">=70"
 * Finally, remove the other sheets and save the file as "Cleaned Data.xlsx"
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/02 Clean Data.png){width=60%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/02 Clean Data.png){width=100%}
 
 
 ## 3. Importing to Tableau
@@ -112,7 +112,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * Open up Tableau and import Cleaned Data.xlsx
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/03 Importing.png){width=60%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/03 Importing.png){width=60%}
 
 
 ## 4. Visualising using bar chart
@@ -120,32 +120,32 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * On a new worksheet, drag and drop *Age Group* to Columns and *2009* and *2019* to Rows
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 1.png){width=50%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 1.png){width=50%}
 
 * Select **side-by-side bars** under **Show Me**
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 2.png){width=40%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 2.png){width=40%}
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 3.png)
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 3.png){width=100%}
 
 * Turn on **Show Mark Labels** to display the percentage value above each bar
 * Change the number format of both measures *2009* and *2019* to percentage by right-clicking the measures, select Default Properties > Number Format > Percentage
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 4.png){width=40%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 4.png){width=40%}
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 5.png){width=40%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 5.png){width=40%}
 
 * Similarly, format the y-axis value to percentage by right-clicking the y-axis, **Format > Scale > Numbers > Percentage**
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 6.png){width=40%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 6.png){width=40%}
 
 * Since the measure names are displayed as legend at the* side, there is no need to have "2009" and "2019" repeated across the a-xis. This could be removed by selecting the drop down at Measure Names and unchecking **Show Header**
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 7.png){width=40%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 7.png){width=40%}
 
 * As a final touch up on the bar chart, right-click on any part of the y-axis and select **Edit Axis**. Under Title, change the text from "Value" to "Percent (%)"
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 8.png){width=40%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/04 Bar Chart 8.png){width=40%}
 
 
 ## 5. Creating data table 
@@ -153,17 +153,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * On a new worksheet, drag and drop *2009 Number* and *2019 Number* to Rows, and *Age Group* to Columns. Next, select **text tables** under **Show Me**
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/05 Data Table 1.png){width=40%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/05 Data Table 1.png){width=40%}
 
 * Swap *Measure Names* from Columns to Rows, and *Age Group* from Rows to Columns.
 * Amend the header names by right-clicking on *2009 Number* and *2019 Number*, and change them to *2009* and *2019* respectively by selecting **Edit Alias**.
 * select **Analytics** on the side panel and click on **Totals** to compute the grand total of resident labour force in each year
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/05 Data Table 3.png){width=40%}
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/05 Data Table 3.png){width=40%}
 
 * Final step here is to hide away the title by right-clicking on the title and selecting **Hide Title**
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/05 Data Table 2.png)
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/05 Data Table 2.png){width=100%}
 
 
 ## 6. Creating Dashboard
@@ -171,20 +171,20 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * On a new dashboard, drag and drop the Bar Chart into the centre area. Next, drag and drop the Data Table below the Bar Chart as shown
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/06 Dashboard 1.png)
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/06 Dashboard 1.png){width=100%}
 
 * Adjust the hide and width of the bar chart and data table so that the age groups of the table is aligned to the x-axis of the bar chart. Here, there is a need to fix the size of the dashboard as setting the size to Automatic will mess up the intended alignment between the bar chart and the data table.
 
 * Double-click on the title of the bar chart to amend the title, and include message that the author wants to convey
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/06 Dashboard 2.png)
+    ![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/06 Dashboard 2.png){width=100%}
 
 * Finally, include the necessary text and source by draging the Text object into the dashboard
 
 The final dashboard is as shown below, and could be access via the link provided.
 
 
-![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/Tableau.png)
+![](/ISSS608/blog/_posts/2021-01-26-dataviz-makeover-1/image/Tableau.png){width=80%}
 https://public.tableau.com/profile/dylan7338#!/vizhome/DatavizMakeover1_16118012680840/Dashboard1
 
 
