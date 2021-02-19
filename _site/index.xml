@@ -7,14 +7,22 @@
     <description>All about data visualisation
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>DataViz Makeover 2</title>
+      <dc:creator>Dylan Wong</dc:creator>
+      <link>https://dylanwong.netlify.app/posts/2021-02-15-dataviz-makeover-2</link>
+      <description>A critique and proposed makeover of the data visualisation created by a research team to understand the willingness of the public on COVID-19 vaccination. The data used by the research team was obtained from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github (https://github.com/YouGov-Data/covid-19-tracker).</description>
+      <guid>https://dylanwong.netlify.app/posts/2021-02-15-dataviz-makeover-2</guid>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>DataViz Makeover 1</title>
       <dc:creator>Dylan Wong</dc:creator>
       <link>https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1</link>
       <description>This assignment sets to critically assess the data visualisation of Resident Labour by Age published by the Ministry of Manpower in the Labour Force in Singapore Advance Release 2019 report.</description>
       <guid>https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1</guid>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       <media:content url="https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1/./image/Tableau.png" medium="image" type="image/png" width="1563" height="1148"/>
     </item>
     <item>

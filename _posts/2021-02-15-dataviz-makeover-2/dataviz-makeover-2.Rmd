@@ -2,7 +2,6 @@
 title: "DataViz Makeover 2"
 description: |
   A critique and proposed makeover of the data visualisation created by a research team to understand the willingness of the public on COVID-19 vaccination. The data used by the research team was obtained from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github (https://github.com/YouGov-Data/covid-19-tracker).
-draft: true
 author:
   - name: Dylan Wong 
     url: https://www.linkedin.com/in/dylan-wong/
@@ -78,6 +77,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # C. Data Visualisation in Tableau
 
+The interactive dashboard created could be found [here](https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover2_16137396357280/Dashboard1).
+
+![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/Tableau.png)
+
 # D. Preparation of Data Visualisation
 
 ## 1. Data Preparation
@@ -125,7 +128,7 @@ knitr::opts_chunk$set(echo = FALSE)
     _employment_status_7_|Other
     _File Paths_|File Name (Country)
 
-* Next, click on the "*+*" sign beside connected data and add a *Clean Step* to apply the variables selection.
+* Next, click on the "*+*" sign beside connected data and add a **Clean Step** to apply the variables selection.
 
     <center>![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Clean.png)</center>
     
@@ -145,7 +148,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Clean5.png)
     
-* Finally, export the data by creating an *Output* step. Click on the the "*+*" button beside Clean 1 and select *Output*. 
+* Finally, export the data by creating an **Output** step. Click on the the "**+**" button beside Clean 1 and select **Output**. 
 
     <center>![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Clean6.png)</center>
     
@@ -155,7 +158,7 @@ knitr::opts_chunk$set(echo = FALSE)
     
 ## 2. Loading of Data
 
-* Open up Tableau, click on *Text file* and locate the _Cleaned.csv_ file exported from Tableau Prep Builder
+* Open up Tableau, click on **Text file** and locate the _Cleaned.csv_ file exported from Tableau Prep Builder
 
      ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/02 Loading.png){width=100%}
 
@@ -183,7 +186,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Score.png)
     
-* Right-click on the _Survey Questions_ column and select *Aliases..*. Update the Value of the field names to the actual questions.
+* Right-click on the _Survey Questions_ column and select **Aliases..**. Update the Value of the field names to the actual questions.
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Vaccine Aliases.png)
     
@@ -191,9 +194,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Score Aliases.png)
     
-* Create a calculated field to assign an integer value to each score and name is _Score Value_.
+* Create a calculated field to assign an integer value to each score and name is _Response_.
 
-    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Score Value.png)
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Response.png)
 
 * Create 7 other calculated fields using the formula shown:
 
@@ -201,21 +204,21 @@ knitr::opts_chunk$set(echo = FALSE)
     :-|:----
     Number of Records|1
     Total Count|Total(SUM([Number of Records]))
-    Count Negative|IF [Score Value]<3 THEN 1 ELSEIF  [Score Value]=3 THEN 0.5 ELSE 0 END
+    Count Negative|IF [Response]<3 THEN 1 ELSEIF  [Response]=3 THEN 0.5 ELSE 0 END
     Total Count Negative|TOTAL(SUM([Count Negative]))
     Percentage|SUM([Number of Records])/[Total Count]
     Gantt Start|-[Total Count Negative]/[Total Count]
     Gantt Percent|PREVIOUS_VALUE([Gantt Start])+ZN(LOOKUP([Percentage],-1))
     
-* Drag _Gantt Percent_ from the left panel into Columns _Country_ into Rows, and _Score Value_ into Detail
+* Drag _Gantt Percent_ from the left panel into Columns _Country_ into Rows, and _Response_ into Detail
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging1.png)
 
-* From the dropdown menu of _Gantt Percent_, select *Compute Using* > *Score Value*
+* From the dropdown menu of _Gantt Percent_, select **Compute Using** > **Response**
   
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging2.png) 
     
-* Next, change the chart type to Gantt Chart, drag from the left panel _Score Value_ into Color, and _Percentage_ into Size 
+* Next, change the chart type to Gantt Chart, drag from the left panel _Response_ into Color, and _Percentage_ into Size 
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging3.png) 
     
@@ -224,8 +227,123 @@ knitr::opts_chunk$set(echo = FALSE)
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging4.png) 
     
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging5.png){width=100%}
+    
+* Drag _Survey Questions_ into Filter, select *All*, and follow by **Apply**.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging6.png){width=100%}
+    
+* Right-click on _Survey Questions_ under Filter, and select **Show Filter**.
+    
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging7.png)
+    
+* On the right panel, click on the the dropdown arrow in the _Survey Questions_ filter and select **Single Value (dropdown)**.
+        
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging8.png)
+    
+* Next, to create the typical age groups used, right-click on *Age* on the left panel. Then, select the first age then hold down Shift key to select the last age of the age group to be created. Click on **Group** and input the name of the age group.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging9.png){width=100%}
+    
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging10.png)
+
+* Similar groups are also created for *Household Children* and *Household Size*. Drag the newly created *Household Children (group)*, *Household Size (group)*, *Age (group)*, along with *Employment Status* into the Filters. Right-click each of these variables in the Filters and select **Show Filter**
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging10.png)
+
+* Since *Survey Questions* filter options could not be displayed in full if display on the right due to the long text, it was dragged down to the under the graph. Using the similar method described above, the filter selection types of *Household Children (group)*, *Household Size (group)*, *Age (group)*, *Employment Status*, and  were changed to  **Single Value (dropdown)**.
+
+* Last but not least, on the dropdown of *Country* field in Rows, and select **Sort**. Sort By **Field** in **Ascending** order, and select **% Agree** under Field Name.  
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging12.png)
+
+## Creating Error Bar on Dot Plot Chart
+
+* The first step is to create calculated field as follows. Here both "Agree" and "Strongly Agree", as well as 50% of "Neutral" are treated equally as "Agree".
+
+     Field|Formula
+     :-|:-----|
+     *% Agree%*|SUM(IF [Response]=5 OR [Response] = 4 THEN 1 ELSEIF [Response] = 3 THEN 0.5 ELSE 0 END)/ SUM([Number of Records])
+     *Prop_SE*|SQRT(([% Agree]*(1-[% Agree]))/SUM([Number of Records]))
+     *Z_95%*|1.959964
+     *Z_99%*|2.575829
+     *Prop_Margin of Error 95%*|[Z_95%]*[Prop_SE]
+     *Prop_Lower Limit 95%*|[% Agree]-[Prop_Margin of Error 95%]
+     *Prop_Upper Limit 95%*|[% Agree]+[Prop_Margin of Error 95%]
+     *Prop_Margin of Error 99%*|[Z_99%]*[Prop_SE]
+     *Prop_Lower Limit 99%*|[% Agree]-[Prop_Margin of Error 99%]
+     *Prop_Upper Limit 99%*|[% Agree]+[Prop_Margin of Error 99%]
+     
+* To create the chart, *% Agree* was first dragged into Columns from the left panel and *Country* into Rows
+
+* Next, create a new parameter with the inputs shown below
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/04 Error3.png)
+
+* *Measure Values* was then dragged into Columns. Click on the dropdown of Measure Values and select **Dual Axis**.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/04 Error1.png)
+    
+* Hold down the Ctrl key on the keyboard and select all the fields to be removed from the Measure Values pane. Then drag the highlighted fields out of the pane.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/04 Error2.png)
+    
+* Right-click on the x-axis and select **Synchronise Axis**
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/04 Error7.png)
+
+* Under the Measure Values setting, change the visualisation type to Line. Drag *Measure Names* into Path, and another *Measure Names* from the left panel to Colour
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/04 Error4.png)
+    
+* Right-click on the *Confidence Interval* parameter created and select **show Parameter**.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/04 Error5.png)
+    
+* Change the colour of the Lower Limit and Upper Limit to grey, and swap the position of *Measure Values* and *% Agree* in the Columns.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/04 Error6.png)
+    
+* Lastly, on the dropdown of *Country* field in Rows, and select **Sort**. Sort By **Field** in **Ascending** order, and select **% Agree** under Field Name.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging12.png)
+    
+## 5. Creating the Dashboard
+
+* In a new dashboard, drag the "Diverging" worksheet into the center. Next, drag the "CI" worksheet onto the right side of the diverging stacked bar chart.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/05 Dashboard1.png){width=100%}
+    
+* Arrange the Filters and Legend neatly as shown. Since there is sufficient space, the selection type for *Employment Status* filter was changed to **Multiple Values (list)**.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/05 Dashboard2.png)
+
+* Since the options of *Survey Questions* filters are truncated if placed on the side along with the other filters due to the long text, it was dragged to the bottom of the 2 graph.
+    
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/05 Dashboard3.png){width=100%}
+    
+* Insert Text on top of the 2 charts to create a chart title
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/05 Dashboard5.png){width=100%}
+    
+* Finally, right-click on the *Household Children (group)*, *Household Size (group)*, *Age (group)*, *Employment Status*, and *Survey Questions* filters > **Apply to Worksheets** > **All Using Related Data Sources** to synchronise the filters for both charts.
+
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/05 Dashboard4.png)
 
 # E. Observations
+
+![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs3.png){width=100%}
+![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs6.png){width=100%}
+ 
+1. From the comparison of the 2 survey responses above, i.e. "If a Covid-19 vaccine were made available to me this week, I would definitely get it" and "I am worried about getting COVID19", it could be observed that a number of countries are in dilemma. For example, while Japan worries the most about contracting COVID-19, they are also worried about getting vaccinated in both near and far future. In fact, they are extremely worried of the potential side effect of the vaccine that and the trust in government as shown. This is rather surprising as Japan was never known to be more "kiasi" or afraid of death than Singapore, but from the data it is clear that Japan is the worst. Not only are they afraid of COVID-19, they are also afraid of being affected by the side effects of potential side effects to the point that they will not really consider getting vaccinated 1 year later. Another country with such observation is France. It is a relief that while Singaporeans are afraid of COVID-19 and the vaccine, at least they have a government who can be trusted.
+
+![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs7.png){width=100%}
+
+2. It could be observed that United Kingdom, Denmark, and Israel are very enthusiastic about getting vaccinated. This is due to the fact that they have government who they trust
+
+![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs8.png){width=100%}
+
+    
+3. Globally, there are less margin error in the responses of those who are full time employed and retired for all questions. The margin of error  observed on those who are not working, unemployed, and part time employed are wide. This shows the respondents who are working or have worked are mostly consistent in their responses and their responses are much more representative of the real population.
 
 
 
