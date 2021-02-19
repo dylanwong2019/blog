@@ -199,7 +199,7 @@ The interactive dashboard created could be found [here](https://public.tableau.c
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Score Aliases.png)
     
-* Create a calculated field to assign an integer value to each score and name is _Response_.
+* Create a calculated field to assign an integer value to each score and name i6 "*Response*".
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Response.png)
 
@@ -330,7 +330,7 @@ The interactive dashboard created could be found [here](https://public.tableau.c
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/05 Dashboard5.png){width=100%}
     
-* Finally, right-click on the *Household Children (group)*, *Household Size (group)*, *Age (group)*, *Employment Status*, and *Survey Questions* filters > **Apply to Worksheets** > **All Using Related Data Sources** to synchronise the filters for both charts.
+* Finally, right-click on the *Household Children (group)*, *Household Size (group)*, *Age (group)*, *Employment Status*, and *Survey Questions* filters > **Apply to Worksheets** > **All Using Related Data Sources** to synchronise the filters for both charts. This has to be done individually and manually for all filters mentioned.
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/05 Dashboard4.png)
 
