@@ -75,6 +75,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Proposed Data Visualisation
 
+![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/Sketch.jpg)
+
+
 # C. Data Visualisation in Tableau
 
 The interactive dashboard created could be found [here](https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover2_16137396357280/Dashboard1).
@@ -256,7 +259,7 @@ The interactive dashboard created could be found [here](https://public.tableau.c
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Diverging12.png)
 
-## Creating Error Bar on Dot Plot Chart
+## 4. Creating Error Bar on Dot Plot Chart
 
 * The first step is to create calculated field as follows. Here both "Agree" and "Strongly Agree", as well as 50% of "Neutral" are treated equally as "Agree".
 
@@ -334,7 +337,7 @@ The interactive dashboard created could be found [here](https://public.tableau.c
 ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs3.png){width=100%}
 ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs6.png){width=100%}
  
-1. From the comparison of the 2 survey responses above, i.e. "If a Covid-19 vaccine were made available to me this week, I would definitely get it" and "I am worried about getting COVID19", it could be observed that a number of countries are in dilemma. For example, while Japan worries the most about contracting COVID-19, they are also worried about getting vaccinated in both near and far future. In fact, they are extremely worried of the potential side effect of the vaccine that and the trust in government as shown. This is rather surprising as Japan was never known to be more "kiasi" or afraid of death than Singapore, but from the data it is clear that Japan is the worst. Not only are they afraid of COVID-19, they are also afraid of being affected by the side effects of potential side effects to the point that they will not really consider getting vaccinated 1 year later. Another country with such observation is France. It is a relief that while Singaporeans are afraid of COVID-19 and the vaccine, at least they have a government who can be trusted.
+1. From the comparison of the 2 survey responses above, i.e. "If a Covid-19 vaccine were made available to me this week, I would definitely get it" and "I am worried about getting COVID19", it could be observed that a number of countries are in dilemma. For example, while Japan worries the most about contracting COVID-19, they are also worried about getting vaccinated in both near and far future. In fact, they are extremely worried of the potential side effect of the vaccine that and the trust in government as shown. This is rather surprising as Japan was never known to be more "kiasi" or worrisome than Singapore, but from the data it is clear that Japan is the worst. Not only are they afraid of COVID-19, they are also afraid of being affected by the side effects of potential side effects to the point that they will not consider getting vaccinated 1 year later. Another country with such observation is France. It is a relief that while Singaporeans are afraid of COVID-19 and the vaccine, at least they have a government who can be trusted (backed by data).
 
 ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs7.png){width=100%}
 
