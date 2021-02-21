@@ -139,11 +139,11 @@ The interactive dashboard created could be found [here](https://public.tableau.c
     
 * Under *Clean 1* step, frequency distributions of each variables could be observed. To ensure that the eventual visualisation is limited to data collected in January 2021 only, the _endtime_ was filtered by clicking on the 3 dots button *"..."* > *Filter* > *Range of Dates*
 
-    <center>![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Clean2.png)</center>
+    <center>![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Clean2.png){width=100%}</center>
     
     The minimum date was set at 01/01/2021. Since from the frequency distribution it was observed that there are no data collect beyond January 2021, a maximum date need not be inputted.
     
-    <center>![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Clean3.png)</center>
+    <center>![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/01 Clean3.png){width=100%}</center>
 
 * It was also observed that the datas sets from several countries have separate fields for respondents to respond to the question on their employment status, i.e. _employment_status_1_, _employment_status_2_, _employment_status_3_, _employment_status_4_, _employment_status_5_, _employment_status_6_, _employment_status_7_. A calculated field was created to harmonise these fields into one. After clicking on *Create Calculated Field...*, input the formula shown below to consolidate the different variables for employment status.
 
@@ -199,7 +199,7 @@ The interactive dashboard created could be found [here](https://public.tableau.c
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Score Aliases.png)
     
-* Create a calculated field to assign an integer value to each score and name i6 "*Response*".
+* Create a calculated field to assign an integer value to each score and name is "*Response*".
 
     ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Response.png)
 
