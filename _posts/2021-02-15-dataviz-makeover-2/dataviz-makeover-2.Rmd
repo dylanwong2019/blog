@@ -44,7 +44,7 @@ knitr::opts_chunk$set(echo = FALSE)
 1. While it is pleasant that the right bar chart has been sorted in descending order to allow better reading experience, the order of the countries on the y-axis of both bar charts are not synchronised - the chart on the left is sorted alphabetically. viewers may be confused as to why the 2 charts are placed side by side, and they may second-guess whether the author is trying to make some sort of comparison.
 1. The right bar chart is essentially just the extraction of the percentage of "strongly agree", which has already been shown in the 100% stacked bar chart on the left. To achieve the same intent, the left bar chart could have been sorted  in descending order by the "Strongly agree", and with the "Strongly agree" bars aligned to the left - against the y-axis. Viewers may be confused by the redundant chart created.
 1. The rationale as to why the focus is only on those who strongly agreed is unclear. "Agree" is also a positive response to the willingness to get vaccinated.
-1. The confidence interval, which is the margin of error that tells reader how much the survey results would be reflective of the view of the overall population, is missing. Viewers should be kept informed
+1. The confidence interval, which is the margin of error that tells reader how much the survey results would be reflective of the view of the overall population, is missing. Viewers should be kept informed.
 1. The legend shows only "strongly agree" and "strongly disagree". It is up to viewers' own interpretation of what the other 3 colours are referring to.
 1. The Likert scale used is rather unconventional. The ratings/ score is usually assigned in a progressive manner, i.e. higher rating denotes better or more positive response than the preceding value. The case here is opposite where "1" is assigned to "Strongly Agree" and "5" being assigned to "Strongly Disagree".
 
@@ -179,13 +179,13 @@ The interactive dashboard created could be found [here](https://public.tableau.c
     
     Edit the country names - removing ".cvs" and capitalising first letter
     
-    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/02 Aliases.png)
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/02 Aliases.png){width=100%}
 
 ## 3. Creating Diverging Stacked Bar Chart
 
 * To create the diverging stacked bar chart, the vaccine related survey questions, i.e. _vac_1_, _vac2_1_, _vac2_2_, _vac2_3_, _vac2_6_, _vac_3_, are pivoted. Highlight the columns, right-click, and select *Pivot*. 
 
-    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Survey Questions.png)
+    ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/03 Survey Questions.png){width=100%}
 
 * Next, double-clock on the column names and change it to "Survey Questions" and "Score" as shown.
 
@@ -339,7 +339,7 @@ The interactive dashboard created could be found [here](https://public.tableau.c
 ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs3.png){width=100%}
 ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs6.png){width=100%}
  
-1. From the comparison of the 2 survey responses above, i.e. "If a Covid-19 vaccine were made available to me this week, I would definitely get it" and "I am worried about getting COVID19", it could be observed that a number of countries are in dilemma. For example, while Japan worries the most about contracting COVID-19, they are also worried about getting vaccinated in both near and far future. In fact, they are extremely worried of the potential side effect of the vaccine that and the trust in government as shown. This is rather surprising as Japan was never known to be more "kiasi" or worrisome than Singapore, but from the data it is clear that Japan is the worst. Not only are they afraid of COVID-19, they are also afraid of being affected by the side effects of potential side effects to the point that they will not consider getting vaccinated 1 year later. Another country with such observation is France. It is a relief that while Singaporeans are afraid of COVID-19 and the vaccine, at least they have a government who can be trusted (backed by data).
+1. From the comparison of the 2 survey responses above, i.e. "If a Covid-19 vaccine were made available to me this week, I would definitely get it" and "I am worried about getting COVID19", it could be observed that a number of countries are in dilemma. For example, while Japan worries the most about contracting COVID-19, they are also worried about getting vaccinated in both near and far future. In fact, they are extremely worried of the potential side effect of the vaccine that and the trust in government as shown. This is rather surprising as Japan was never known to be more "kiasi" or worrisome than Singapore, but from the data it is clear that Japan is the worst. Not only are they afraid of COVID-19, they are also afraid of being affected by the potential side effects to the point that they will not consider getting vaccinated 1 year later. Another country with such observation is France. It is a relief that while Singaporeans are afraid of COVID-19 and the vaccine, at least they have a government that they trust (backed by data).
 
 ![](/ISSS608/blog/_posts/2021-02-15-dataviz-makeover-2/image/06 Obs7.png){width=100%}
 
