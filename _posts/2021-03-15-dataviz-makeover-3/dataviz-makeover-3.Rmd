@@ -1,7 +1,7 @@
 ---
 title: "DataViz MakeOver 3"
 description: |
-  A short description of the post.
+  A critique and proposed makeover of the data visualisation of **South-east Asia Armed Conflict Analysis** published on [Tableau Public](https://public.tableau.com/profile/tskam#!/vizhome/South-eastAsiaArmedConflictAnalysis/South-eastAsiaArmedConflictAnalysis). The data (South-East Asia) used for the visualisation could be obtained from [The Armed Conflict Location & Event Data Project (ACLED)](https://acleddata.com/).
 draft: true
 author:
   - name: Dylan Wong 
@@ -17,13 +17,55 @@ output:
     self_contained: false
 ---
 
+<style>
+toc {
+text-align: left
+}
+h1, h2, h3 {
+text-align: left
+}
+body {
+text-align: justify}
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![](./image/original.png)
+## Overview
 
+The original visualisation is as shown below:
+
+![](./image/original.png){width=100%}
+
+  
+## A. Critiques
+
+### Clarity
+
+### Aesthetics
+
+## B. Proposed Improvement and Data Visualisation
+
+### Clarity
+
+### Aesthetics
+
+## C. Data Visualisation in Tableau
+
+## D. Preparation of Data Visualisation
+
+### 1. Data Preparation
+
+### 2. Loading of Data
+
+### 3. Creating Diverging Stacked Bar Chart
+
+### 4. Creating Error Bar on Dot Plot Chart
+
+### 5. Creating the Dashboard
+
+## E. Observations
 
 Distill is a publication format for scientific and technical writing, native to the web.
 
