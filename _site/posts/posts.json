@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-03-15-dataviz-makeover-3/",
+    "title": "DataViz MakeOver 3",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Dylan Wong",
+        "url": "https://www.linkedin.com/in/dylan-wong/"
+      }
+    ],
+    "date": "2021-03-15",
+    "categories": [],
+    "contents": "\r\n\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-03-16T00:33:54+08:00",
+    "input_file": "dataviz-makeover-3.utf8.md"
+  },
+  {
     "path": "posts/2021-02-15-dataviz-makeover-2/",
     "title": "DataViz Makeover 2",
     "description": "A critique and proposed makeover of the data visualisation created by a research team to understand the willingness of the public on COVID-19 vaccination. The data used by the research team was obtained from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub hosted at Github (https://github.com/YouGov-Data/covid-19-tracker).",
