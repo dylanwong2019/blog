@@ -45,7 +45,6 @@ The original visualisation is as shown below:
 ### Clarity
 
 1. The y-axis titles of the line plots under Armed Conflict Event by Type of different event types are named as "Count of Sheet1". It is unclear to the reader as to what is "Sheet1". 
-1. The list of event types consists of "Strategic developments". This is confusing as "Strategic developments" is not a negative events, unlike the others.
 1. Data source is not added. The credibility of the visualisation is questionable.
 1. The data range used differ across countries. For example, the line graphs of Malaysia show only 2018 to 2020 information. This can be misleading as the title of the map continues to show "2015-2020".
 1. There are different shapes observed for the same event type/ color. It is unclear what the different shapes represent since there is no legend provided.
