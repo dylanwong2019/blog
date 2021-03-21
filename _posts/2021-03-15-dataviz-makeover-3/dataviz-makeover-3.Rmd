@@ -2,7 +2,7 @@
 title: "DataViz MakeOver 3"
 description: |
   A critique and proposed makeover of the data visualisation of **South-east Asia Armed Conflict Analysis** published on [Tableau Public](https://public.tableau.com/profile/tskam#!/vizhome/South-eastAsiaArmedConflictAnalysis/South-eastAsiaArmedConflictAnalysis). The data (South-East Asia) used for the visualisation could be obtained from [The Armed Conflict Location & Event Data Project (ACLED)](https://acleddata.com/).
-draft: true
+draft: false
 author:
   - name: Dylan Wong 
     url: https://www.linkedin.com/in/dylan-wong/
@@ -68,20 +68,32 @@ The original visualisation is as shown below:
 
 1. The y-asix title of the line graph should be amended from "Count of Sheet1" to "Number of Events".
 1. Include the data source used for the visualisation.
+1. The tooltip of the filled map should have irrelevant information removed and with useful information added.
+1. The tooltip of the symbol map should include other information such as sub event type and notes for each event point.
 
 ### Aesthetics
 
 1. Align the x and y-axis of all the line plots of different event types.
-1. Merge all the events into one single graph so that users could compare the severity or frequency of different events within the same country.
+1. Merge all the events into one single filled graph so that users could compare the severity or frequency of different events within the same country.
+1. The filled map is to be coloured by the same colour of different gradient to show the difference in the number of armed conflicts.
+1. Place a symbol map beside the filled map to show a similar visualisation with points coloured by event type and sized by number of fatalities.
+1. For the symbol map, the points are to have slight transparency so have to reveal the "hidden" event points overlapped by others
 
 ### Interactivity
 
-1. 
-1.
+1. When a country is selected on a filled map, the view should be zoomed in to focused on the country only. The corresponding symbol map should also be focusing on the country selected.
+1. The tooltip should showed more information provided in the dataset, as mentioned under Clarity. It shoudl have table of data if necessary.
+1. The titles of the visualisations should be updated interactively as users make changes to the filters.
+
+### Proposed Data Visualisation
+
+![](./image/sketch.png){width=100%}
 
 ## C. Data Visualisation in Tableau
 
-https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover3_16163191014660/Dashboard2
+The interactive dashboard created could be found [here](https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover3_16163282156450/Dashboard2)
+
+  ![](./image/tableau.png){width=100%}
 
 ## D. Preparation of Data Visualisation
 
@@ -185,7 +197,7 @@ https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover3_16163191
 
 * On a new sheet, renamed "Symbol Map", similar to the Filled Map, drag *Longitude* into Columns and *Latitude* into Rows.
 
-  ![](./image/2 Filled1.png){width=100%}
+  ![](./image/2 Filled1.png)
 
 * Drag *Event Type* into Colour, *Fatalities* into Size, *Event Id Cnty*, *Country*, *Sub Event Type*, and *Notes* into Detail.
 
@@ -231,7 +243,7 @@ https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover3_16163191
   
 * Double-click on the chart title and edit it as shown. 
   
-  ![](./image/5 Conf5.png) 
+  ![](./image/5 Conf5.png){width=100%}
   
 ### 6. Creating Line Graphs for Fatalities
 
@@ -253,11 +265,33 @@ https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover3_16163191
   
   ![](./image/7 Dash2.png) 
   
+* To better enable users to refer to the colour gradient of the Filled Map, right-click on the *No. of Armed Conflicts* color gradient bar and select **Floating**. Then, drag it to within the Filled Map area.
+
+  ![](./image/7 Dash4.png) 
+  
 * From the Objects panel, drag a Text to the top of the dashboard.
 
   ![](./image/7 Dash3.png)
 
 ## E. Observations
+
+![](./image/obs1.png){width=100%}
+
+1. In the past 6 years, from 2015 to 2020, with the exception of Indonesia, Philipiines, and Thailand, the number of armed conflicts in the region stayed pretty much constant in general with no improvement or escalation. Both Indonesia and Thailand saw a stark increase in the number of Protests, while the Philippines saw a dip in the number of Violence against civilians.
+2. With the exception of Myanmar and the Philippines, most of the countries in the region had low fatalities despite multiple armed conflicts of different types.
+
+![](./image/obs2.png){width=100%}
+
+3. From the colour gradient and the hover-over information, it could be observed that the Philippines has the most number of conflicts in the last 6 years, followed by Myanmar, Indonesia, Thailand, Cambodia, Malaysia, Vietnam, and Laos.
+
+![](./image/obs3.png){width=100%}
+
+4. Zooming in on the Philippines by selecting the filled map on the left, and then observing the points on the symbol map on the right, it could be observed from the size of the points that while the country has more Violence against civilians than Battles, it has relatively lower fatalities per event than Battles.
+
+![](./image/obs4.png){width=100%}
+
+5. The area of the neighboring countries surrounding Singapore are rather peaceful in the past 6 years. A small number of Protests broke up but were of little to no fatality.
+
 
 Distill is a publication format for scientific and technical writing, native to the web.
 
