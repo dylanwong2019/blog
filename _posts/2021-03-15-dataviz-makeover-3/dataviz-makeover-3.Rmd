@@ -2,6 +2,7 @@
 title: "DataViz MakeOver 3"
 description: |
   A critique and proposed makeover of the data visualisation of **South-east Asia Armed Conflict Analysis** published on [Tableau Public](https://public.tableau.com/profile/tskam#!/vizhome/South-eastAsiaArmedConflictAnalysis/South-eastAsiaArmedConflictAnalysis). The data (South-East Asia) used for the visualisation could be obtained from [The Armed Conflict Location & Event Data Project (ACLED)](https://acleddata.com/).
+draft: true
 author:
   - name: Dylan Wong 
     url: https://www.linkedin.com/in/dylan-wong/
