@@ -39,7 +39,7 @@ The original visualisation is as shown below:
 ![](./image/original.png){width=100%}
 
   
-### A. Critiques
+## A. Critiques
 
 ### Clarity
 
@@ -85,15 +85,177 @@ https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover3_16163191
 
 ## D. Preparation of Data Visualisation
 
-### 1. Data Preparation
+### 1. Loading and Preparation of Data
 
-### 2. Loading of Data
+* After loading up Tableau Desktop, select Microsoft Excel, and locate the data file.
 
-### 3. Creating Diverging Stacked Bar Chart
+  ![](./image/1 Data1.png)
 
-### 4. Creating Error Bar on Dot Plot Chart
+* On the preview panel, review the data to make sure that the variables are of the correct data type. Since the variable *Year* will be used for the visualisation, and it is of the wrong data type by default, click on the hash (#) symbol above the column header, which represents Number, and select Date.
 
-### 5. Creating the Dashboard
+  ![](./image/1 Data2.png)
+
+### 2. Creating Filled Map
+
+* On a new worksheet, rename Filled Map, drag *Latitude* to Rows and *Longitude* to Columns.
+
+  ![](./image/2 Filled1.png)
+
+* Create a new variable by selecting **Create Calculated Field...** from the drop down arrow.
+
+  ![](./image/2 Filled2.png)
+  
+* Name the variable appropriate and input "1" in the formula field.
+  
+  ![](./image/2 Filled3.png)
+
+* The default map generated has Country Names shown. Since the focus is on South-East Asia, and that fill colour will overlap and names, there is no point have the Count Names layer turned on. To remove, select **Map > Map Layers** on the menu bar then uncheck Country/Region Names.
+
+  ![](./image/2 Filled4.png)
+  
+* Drag *No. of Armed Conflicts* to Colour, *Country* to Detail, *Country* again to Label, *No. of Armed Conflicts* to Label, and *Fatalities* to Detail. Change the display to Map from the drop-down.
+
+  ![](./image/2 Filled5.png)
+
+* From the preview of the data earlier, it was observed that the variable *Year* consists of years 2010 to 2020. To limit the filter range to just 2015 to 2020, drag *Year* to Filters. Select Years and then check 2015 to 2020.
+  
+  ![](./image/2 Filled6.png)
+
+  ![](./image/2 Filled7.png)
+
+* Right-click on same *Year* on the data panel and select duplicate.
+
+  ![](./image/2 Filled8.png)
+  
+* Drag the duplicated *Year (copy)* to filters, and repear the same selections as above.
+
+  ![](./image/2 Filled9.png)
+  
+* To display the filter, right-click on *YEAR(Year)* on Filters and select **Show Filter**.
+
+  ![](./image/2 Filled10.png)
+
+* On the drop-down menu of the *YEAR(Year)* shown, select **Only Relevant Values**.
+
+  ![](./image/2 Filled11.png)
+
+* Similar, to display the filter for *country*, drag the *Country* variable into the Filters panel, then right-click and select Show Filter.
+
+  ![](./image/2 Filled12.png)
+
+* To have the map zoomed into a particular country when selected, hold down Ctrl+Shift+A on the keyboard to open up the Actions window. Select **Add Action > Filter**.
+
+  ![](./image/2 Filled13.png)
+
+* On the Add Filter Action Window, select **Select** under "Run action on:". Under Target Filters, click on the **Add Filter...** button.
+
+  ![](./image/2 Filled14.png)
+  
+* On the drop-down menu of Data Source, select **Country**. Once down, click on OK, OK on the Add Filter Action window, and OK on the Actions window.
+
+  ![](./image/2 Filled15.png)
+
+* Double-click on the chart title and edit it as shown. 
+  
+  ![](./image/2 Filled16.png){width=100%}
+
+### 3. Creating and Editting Tooltip for Filled Map
+
+* On a new sheet, renamed Event Occurrence, drag the variables *Event Type*, *Sub Event Type*, and *Event Type* again onto Rows.
+
+  ![](./image/3 Tool1.png)
+  
+* Right-click on the last *Event Type*, select **Measure > Count**.
+
+  ![](./image/3 Tool2.png) 
+   
+* Drag the *CNT(Event Type)* to Text in the Marks panel.   
+   
+  ![](./image/3 Tool3.png) 
+   
+* Back to the Filled Map sheet, select **Worksheet** on the menu bar, then **Tooltip...**.
+
+  ![](./image/3 Tool4.png) 
+
+* In the Edit Tooltip window, remove the irrelevant information and update the fields as shown.
+
+  ![](./image/3 Tool5.png) 
+
+### 4. Creating Symbol Map
+
+* On a new sheet, renamed "Symbol Map", similar to the Filled Map, drag *Longitude* into Columns and *Latitude* into Rows.
+
+  ![](./image/2 Filled1.png){width=100%}
+
+* Drag *Event Type* into Colour, *Fatalities* into Size, *Event Id Cnty*, *Country*, *Sub Event Type*, and *Notes* into Detail.
+
+  ![](./image/4 Symb1.png)
+
+* Under Colour, reduce the Opacity to 75% and select grey colour a Border.
+
+  ![](./image/4 Symb3.png) 
+
+* Click on the drop down arrow on *SUM(Fatalities)* on the right panel, and select **Edit sizes...*. Here, increase the size of the points by dragging the slider bar to the right.
+
+  ![](./image/4 Symb2.png) 
+
+* Ctrl+Shift+A > **Add Action > Filter** again. Similar to the previous action, select **Select** under "Run action on:", and add *Country* as the selected field.
+
+  ![](./image/4 Symb4.png) 
+  
+* Edit the tooltip as shown.
+
+  ![](./image/4 Symb5.png)
+
+* Double-click on the chart title and edit it as shown. 
+  
+  ![](./image/4 Symb6.png){width=100%}
+
+### 5. Creating Line Graphs for Number of Armed Conflicts
+
+* On a new sheet, renamed "Conflicts", drag *Country* and *Year* to Columns and *No. of Armed Conflicts* to Rows.
+  
+  ![](./image/5 Conf1.png) 
+  
+* Drag *Event Type* to Colour.
+
+  ![](./image/5 Conf2.png) 
+  
+* Right-click on the y-axis and select **Edit Axis...**.
+
+  ![](./image/5 Conf3.png) 
+  
+* Under Scale, check **Logarithmic** then close the window.
+  
+  ![](./image/5 Conf4.png) 
+  
+* Double-click on the chart title and edit it as shown. 
+  
+  ![](./image/5 Conf5.png) 
+  
+### 6. Creating Line Graphs for Fatalities
+
+* On a new sheet, renamed "Fatalities", drag *Country* and *Year* to Columns and *Fatalities* to Rows.
+  
+  ![](./image/6 Fata1.png)
+  
+* Double-click on the chart title and edit it as shown. 
+  
+  ![](./image/6 Fata2.png){width=100%}
+
+### Creating the Dashboard
+
+* First, drag the Symbol Map to the dashboard. Next, place Conflicts below Symbol Map and Fatalities below Conflicts. Finally, drag in Filled Map on the left of Symbol Map.
+
+  ![](./image/7 Dash1.png){width=100%}
+  
+* Right-click on each of the filters, select **Apply to Worksheets > All Using Related Data Sources**.
+  
+  ![](./image/7 Dash2.png) 
+  
+* From the Objects panel, drag a Text to the top of the dashboard.
+
+  ![](./image/7 Dash3.png)
 
 ## E. Observations
 
