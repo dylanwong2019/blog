@@ -7,7 +7,15 @@
     <description>All about data visualisation
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 15 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>DataViz MakeOver 3</title>
+      <dc:creator>Dylan Wong</dc:creator>
+      <link>https://dylanwong.netlify.app/posts/2021-03-15-dataviz-makeover-3</link>
+      <description>A critique and proposed makeover of the data visualisation of **South-east Asia Armed Conflict Analysis** published on [Tableau Public](https://public.tableau.com/profile/tskam#!/vizhome/South-eastAsiaArmedConflictAnalysis/South-eastAsiaArmedConflictAnalysis). The data (South-East Asia) used for the visualisation could be obtained from [The Armed Conflict Location &amp; Event Data Project (ACLED)](https://acleddata.com/).</description>
+      <guid>https://dylanwong.netlify.app/posts/2021-03-15-dataviz-makeover-3</guid>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>DataViz Makeover 2</title>
       <dc:creator>Dylan Wong</dc:creator>

@@ -2,7 +2,7 @@
 title: "DataViz MakeOver 3"
 description: |
   A critique and proposed makeover of the data visualisation of **South-east Asia Armed Conflict Analysis** published on [Tableau Public](https://public.tableau.com/profile/tskam#!/vizhome/South-eastAsiaArmedConflictAnalysis/South-eastAsiaArmedConflictAnalysis). The data (South-East Asia) used for the visualisation could be obtained from [The Armed Conflict Location & Event Data Project (ACLED)](https://acleddata.com/).
-draft: true
+draft: false
 author:
   - name: Dylan Wong 
     url: https://www.linkedin.com/in/dylan-wong/
@@ -39,19 +39,49 @@ The original visualisation is as shown below:
 ![](./image/original.png){width=100%}
 
   
-## A. Critiques
+### A. Critiques
 
 ### Clarity
 
+1. The y-axis titles of the line plots under Armed Conflict Event by Type of different event types are named as "Count of Sheet1". It is unclear to the reader as to what is "Sheet1". 
+1. The list of event types consists of "Strategic developments". This is confusing as "Strategic developments" is not a negative events, unlike the others.
+1. Data source is not added. The credibility of the visualisation is questionable.
+1. The data range used differ across countries. For example, the line graphs of Malaysia show only 2018 to 2020 information. This can be misleading as the title of the map continues to show "2015-2020".
+1. There are different shapes observed for the same event type/ color. It is unclear what the different shapes represent since there is no legend provided.
+
 ### Aesthetics
+
+1. With reference to the Armed Conflict Location & Event visualisation on the right, several countries have high concentration of events points with certain events overlapping the others. Readers are not able to easily identify the other events in the same area. Examples of places or spots with high concentration of events include the whole of the Philippines, northern part of Rakhine State of Myanmar, and Pattani, Yala, and Narathiwat provinces at the southernmost of Thailand.
+1. The header of the line plots should not be "Event Date" as the default x-axis shows only the years.
+1. The word "Event" on the title of the map does not change when a specific Event Type is selected. 
+1. The data points on the map have white borders that are redundant.
+
+### Interactivity
+
+1. Country filter is provided to allow users to focus on country of their interest.
+1. Event Type filter highlights the corresponding line graph and points on the map by lightening the colours of the non-selected ones. This enables users to quickly identify the graph and event they would like to focus on.
+1. The hover-over information/ tooltip of the individual points on the map does not provide much useful information.
 
 ## B. Proposed Improvement and Data Visualisation
 
 ### Clarity
 
+1. The y-asix title of the line graph should be amended from "Count of Sheet1" to "Number of Events".
+1. Include the data source used for the visualisation.
+
 ### Aesthetics
 
+1. Align the x and y-axis of all the line plots of different event types.
+1. Merge all the events into one single graph so that users could compare the severity or frequency of different events within the same country.
+
+### Interactivity
+
+1. 
+1.
+
 ## C. Data Visualisation in Tableau
+
+https://public.tableau.com/profile/dylan7338#!/vizhome/DataVizMakeover3_16163191014660/Dashboard2
 
 ## D. Preparation of Data Visualisation
 
