@@ -11,6 +11,17 @@ output:
     self_contained: false
 ---
 
+<style>
+toc {
+text-align: left
+}
+h1, h2, h3 {
+text-align: left
+}
+body {
+text-align: justify}
+</style>
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
@@ -45,7 +56,7 @@ for(p in packages){ 'exclude FOR loop for Shiny>'
 
 The data sets for this Visual Analytics Project were sourced from [Eurostat Climate Change Database](https://ec.europa.eu/eurostat/web/climate-change/data/database). Through the preliminary literature review conducted, the data sets used were narrowed down, wrangled, and subsequently merged into a single panel or cross-sectional time-series data where behavior of entities, in this case countries, are observed and recorded across time.
 
-The list of literature reviewed and details of the data preparation could be found (here).
+The list of literature reviewed and details of the data preparation could be found [here](https://greenhouseemission.netlify.app/posts/2021-03-28-data-preparation/).
 
 ## 2.3 Loading the Dataset into R
 
