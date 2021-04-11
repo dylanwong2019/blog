@@ -7,14 +7,23 @@
     <description>All about data visualisation
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>VAP Assignment</title>
+      <dc:creator>Dylan Wong</dc:creator>
+      <link>https://dylanwong.netlify.app/posts/2021-04-05-vap-assignment</link>
+      <description>A short description of the post.</description>
+      <guid>https://dylanwong.netlify.app/posts/2021-04-05-vap-assignment</guid>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://dylanwong.netlify.app/posts/2021-04-05-vap-assignment/vap-assignment_files/figure-html5/unnamed-chunk-9-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>DataViz MakeOver 3</title>
       <dc:creator>Dylan Wong</dc:creator>
       <link>https://dylanwong.netlify.app/posts/2021-03-15-dataviz-makeover-3</link>
       <description>A critique and proposed makeover of the data visualisation of **South-east Asia Armed Conflict Analysis** published on [Tableau Public](https://public.tableau.com/profile/tskam#!/vizhome/South-eastAsiaArmedConflictAnalysis/South-eastAsiaArmedConflictAnalysis). The data (South-East Asia) used for the visualisation could be obtained from [The Armed Conflict Location &amp; Event Data Project (ACLED)](https://acleddata.com/).</description>
       <guid>https://dylanwong.netlify.app/posts/2021-03-15-dataviz-makeover-3</guid>
-      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
       <media:content url="https://dylanwong.netlify.app/posts/2021-03-15-dataviz-makeover-3/./image/tableau.png" medium="image" type="image/png" width="1405" height="1065"/>
     </item>
     <item>
@@ -36,15 +45,6 @@
       <media:content url="https://dylanwong.netlify.app/posts/2021-01-26-dataviz-makeover-1/./image/Tableau.png" medium="image" type="image/png" width="1563" height="1148"/>
     </item>
     <item>
-      <title>My First Post</title>
-      <dc:creator>Dylan Wong</dc:creator>
-      <link>https://dylanwong.netlify.app/posts/2021-01-10-my-first-post</link>
-      <description>A short description of the post.</description>
-      <guid>https://dylanwong.netlify.app/posts/2021-01-10-my-first-post</guid>
-      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://dylanwong.netlify.app/posts/2021-01-10-my-first-post/my-first-post_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="2304" height="1152"/>
-    </item>
-    <item>
       <title>Welcome to Dylan's DataViz Blog</title>
       <dc:creator>Dylan Wong</dc:creator>
       <link>https://dylanwong.netlify.app/posts/welcome</link>
@@ -52,6 +52,15 @@
 reading what I have to say!</description>
       <guid>https://dylanwong.netlify.app/posts/welcome</guid>
       <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <dc:creator>Dylan Wong</dc:creator>
+      <link>https://dylanwong.netlify.app/posts/2021-01-10-my-first-post</link>
+      <description>A short description of the post.</description>
+      <guid>https://dylanwong.netlify.app/posts/2021-01-10-my-first-post</guid>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://dylanwong.netlify.app/posts/2021-01-10-my-first-post/my-first-post_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="2304" height="1152"/>
     </item>
   </channel>
 </rss>
