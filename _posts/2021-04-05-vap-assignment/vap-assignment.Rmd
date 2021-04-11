@@ -1,0 +1,289 @@
+---
+title: "VAP Assignment"
+description: |
+  A short description of the post.
+Draft: False
+author:
+  - name: Dylan Wong
+    url: https://www.linkedin.com/in/dylan-wong/
+date: 04-05-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# 1.0 Purpose of Exploratory Data Analysis
+
+Exploratory Data Analysis (EDA) is an approach that uses data visualisation to analyse data sets and to summarise their characteristics. It enables users to draw useful information and insights of the data sets with the use of graphical and non-graphical methods to reveal the distribution and statistics of selected variables. Many Data Science experts and literature state that EDA is a critical first step in data analysis as it helps to detect mistakes, check assumptions, determine relationships among the independent variables, and assess the direction and magnitude of relationships between the dependent and independent variablea (Seltman, 2018).
+
+* Seltman, H. (2018, July 11). Carnegie Mellon University Statistics & Data Science. Retrieved from Howard Seltman: http://www.stat.cmu.edu/~hseltman/309/Book/Book.pdf
+* MIT Critical Data. (2016). Secondary Analysis of Electronic Health Records. Springer. doi:10.1007/978-3-319-43742-2
+
+This assignment explores the appropriate tidyverse methods, as well as the ExPanDaR package for EDA.
+
+# 2.0 Preparation of Data Visualisation
+
+## 2.1 Installing and launching R Packages
+
+Instead of the conventional way of installing the required packages right away, the code chunk below checks whether the required packages have already been installed and subsequently install those that are not before loading the packages.
+
+```{r echo= TRUE, message=FALSE, warning=FALSE}
+packages = c('tidyverse', 'ExPanDaR', 'kableExtra', 'ggstatsplot', 'corrplot', 'DT')
+
+for(p in packages){ 'exclude FOR loop for Shiny>' 
+  if(!require(p, character.only = T)){
+    install.packages(p)
+  }
+  library(p, character.only = T)
+}
+```
+
+## 2.2 Data Source
+
+The data sets for this Visual Analytics Project were sourced from [Eurostat Climate Change Database](https://ec.europa.eu/eurostat/web/climate-change/data/database). Through the preliminary literature review conducted, the data sets used were narrowed down, wrangled, and subsequently merged into a single panel or cross-sectional time-series data where behavior of entities, in this case countries, are observed and recorded across time.
+
+The list of literature reviewed and details of the data preparation could be found (here).
+
+## 2.3 Loading the Dataset into R
+
+### Reading the csv file as GHG
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+GHG <- read_csv("data/GHGproj_data.csv")
+```
+
+### Inspecting the structure of the dataset
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+str(GHG)
+```
+
+### Removing and Recoding variable
+
+From the inspection, it could be observed that there are several countries that have very long name. To find out the unique values in Country:
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+unique(GHG$Country)
+```
+
+From the above, it is noticed that the variable *Country* consist of groups of countries that are not needed in the analysis. Also, Germany has a rather long name.
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+G <- GHG %>%
+  filter(!Country %in% c("European Union - 27 countries (from 2020)",
+                         "European Union - 28 countries (2013-2020)", 
+                         "European Union - 28 countries (2013-2020) and Iceland under the Kyoto Protocol")) %>%
+  mutate(Country=recode(Country, "Germany (until 1990 former territory of the FRG)" = "Germany"))
+```
+
+## 2.4 Overview of Dataset
+
+### Datatable
+
+In the propose Shiny application, the data table will be made available to users who not only want to have any overview of the data structure, but also the actual data set.
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+datatable(
+  data = G, 
+  extensions = 'FixedHeader',
+  options =
+    list(
+      scrollX = TRUE,
+      scrollY = 500,
+      scrollCollapse = TRUE,
+      paging = FALSE
+    )
+)
+```
+
+### Descriptive Statistics
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+t <- prepare_descriptive_table(G)
+t$kable_ret  %>%
+  kable_styling("condensed", full_width = F, position = "center")
+```
+
+### Missing Values
+
+To find out the missing values in the data:
+
+```{r echo= TRUE, message=FALSE, warning=FALSE}
+missing.values <- G %>%
+    gather(key = "key", value = "val") %>%
+    mutate(is.missing = is.na(val)) %>%
+    group_by(key, is.missing) %>%
+    summarise(num.missing = n()) %>%
+    filter(is.missing==T) %>%
+    select(-is.missing) %>%
+    arrange(desc(num.missing)) 
+missing.values %>% kable()
+```
+
+Visualising the Missing Values:
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+prepare_missing_values_graph(G, ts_id = "Country")
+```
+
+# 3.0 Exploratory Data Analysis
+
+This section explore different visualisation of EDA and application of interactivity.
+
+## 3.1 Distribution of Variables
+
+### Displaying histogram of multiple variables
+
+```{r echo= TRUE, message=FALSE, warning=FALSE}
+E <- select(G, -c(Country,Year))
+F <- E %>%
+  gather() %>%
+  ggplot(aes(value)) +
+  facet_wrap( ~key, ncol=4, scales="free") +
+  geom_histogram()
+F
+```
+
+### Displaying histogram of individual variables
+
+```{r echo= TRUE, message=FALSE, warning=FALSE}
+H <- select(G, GHG_emissions)
+ggplot(H, aes(GHG_emissions))+
+  geom_histogram()
+```
+
+## 3.2 Visualising Time Trend
+
+Since the independent variables are of continuous data type, to review the trend overtime, the *ggplot* function of ggplot2 package is used along with *geom_line* to plot the line graph.
+
+```{r echo= TRUE, message=TRUE, warning=FALSE, layout="l-body-outset", fig.width=8, fig.height=5}
+t <- ggplot(G, aes(x=Year, y=GHG_emissions, color=Country)) +
+  geom_line()
+t
+```
+
+From the graph above, even with colours assigned to each country, it is hard for users to differentiate the countries. Also, at value below 250000, there are many countries overlapping. The way to improve this visualisation is to transform the y-axis to log10 scale.
+
+```{r echo= TRUE, message=TRUE, warning=FALSE, layout="l-body-outset", fig.width=8, fig.height=5}
+u <- t +
+  scale_y_log10()
+u
+```
+
+While the overlapping of lines has slightly improved with the log10 scale, users will still have difficulty matching the color to legend. Since the legend is not useful, it could be removed using the *theme()* function of ggplot2, which enables the customisation of non-data components of plots.
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+v <- u +
+  geom_text(data=subset(G, Year==2018), aes(label=Country, color=Country)) +
+  theme(legend.position = "none")
+v
+```
+
+In the plot above, there are overlapping between the countries texts, and also the line. To fix this, the *hjust* parameter of the aesthetics setting of *geom_text()* could be adjusted. *check_overlap* could also be turned on. The *coord_cartesian()* allows clipping to be turned off so that text could extend beyond the plot and not be truncated. 
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+v <- u +
+  geom_text(data=subset(G, Year==2018), aes(label=Country, color=Country, hjust = -0.1), check_overlap=TRUE) +
+  coord_cartesian(clip = 'off') +
+  theme(legend.position = "none")
+v
+```
+
+The plot above though better, if far from perfect. Due to the turning off of text over-lapping, many of the labels have been removed. To improve on the aesthetics and users' experience:
+
+* Interactivity could be introduced to enable users to select the country(s) they want to analyse to appear on the graph.
+* Variables selection will also be added to the dashboard to allow users to select and view the trend of the other independent variables.
+
+Finally, a grouped time trend graph will be shown to the users.
+
+```{r}
+graph <- prepare_trend_graph(G, "Year")
+graph$plot
+```
+
+## 3.3 Visualising Correlation
+
+In this session, the *ggcorrmat()* function of the ggstatsplot package, multiple functions of corrplot package, and the *prepare_correlation_graph()* function of ExPanDaR package are explored to find the most appropriate visualisation.
+
+From the visualisation of the missing values, the situation of the missing values in the dataset is not too bad, and it is very much limited to only Switzerland and Liechtenstein. However, coorplote supports only data without missing values. Hence, to create a data set to be used for the corrplot correlation plots, the missing values are removed.
+
+```{r echo= TRUE, message=TRUE, warning=FALSE}
+M <- select(G, -c(Country, Year))
+N <- M[complete.cases(M), ]
+```
+
+### Ellipse *corrplot()* of corrplot package
+
+```{r echo= TRUE, message=TRUE, warning=FALSE, fig.width=10, fig.height=10}
+O <- cor(N)
+corrplot(O, method = "ellipse")
+```
+
+### Number *corrplot()* of corrplot package
+
+```{r echo= TRUE, message=TRUE, warning=FALSE, fig.width=10, fig.height=10}
+O <- cor(N)
+corrplot(O, method = "number")
+```
+
+### *corrplot.mixed()* of corrplot package
+
+```{r echo= TRUE, message=TRUE, warning=FALSE, fig.width=10, fig.height=10}
+O <- cor(N)
+corrplot.mixed(O)
+```
+
+### *ggcormat()* of ggstateplot package
+
+```{r echo= TRUE, message=TRUE, warning=FALSE, fig.width=10, fig.height=10}
+ggcorrmat(data = M)
+```
+
+### *prepare_correlation_graph()* function of ExPanDaR package
+
+```{r message = FALSE, fig.width=10, fig.height=10}
+prepare_correlation_graph(M)
+```
+
+Comparing the correlation plots above, it is clear that *ggcormat()* of ggstateplot package and *prepare_correlation_graph()* function of ExPanDaR package are more robust as they are able to generate correlation plot of dataset with missing values, which is suitable for the panel data project as the dataset has a small number of missing values. A downside of the plot from *prepare_correlation_graph()* is that it returns the dataframe below the plot that cannot be disabled. Therefore, the *ggcormat()* plot is preferred as it has the correlation coefficients embedded within the visualisation, and those variables pairs that are non-significant at ρ < 0.05 are also crossed out
+
+## Bivariate Analysis with Scatterplot
+
+Using the *prepare_scatter_plot()* function of the ExPanDaR package, bivariate analysis between variables could be shown so as to allow users to determine the empirical relationship between variables.
+
+```{r echo= TRUE, message=FALSE, warning=FALSE}
+prepare_scatter_plot(G, x="GHG_emissions", y="Final_EI", color="Country", loess = 1)
+```
+
+# 4.0 Final Visualisation & Interactivity
+
+Each point below represents a unique tab within the EDA module of the Shiny application
+
+1. Data table, Descriptive Statistics, and Missing Values
+2. Histograms of multiple variables and individual variables
+    * To incorporate variables selector
+3. Time Trend of variables of group and each country
+    * To incorporate slider for years and countries selector
+4. Correlation Plot
+    * To incorporate slider for year and countries selector
+5. Bivariate analysis with Scatterplot
+    * To incorporate variables selector
+
+# 5.0 Major Advantages of Incorporating Interactivity
+
+1. A static visualisation may contain too much additional information that would distract users from focusing on the information that they want. For example, for the case of the time trend graph here, there are trend lines of all countries in the same graph. If a countries selector is included, for the case of an interactive visualisation, users will be able to select only those of interest, and those that he wants to analyse. By limiting the selection to only a few, it will also ensure minimal trend lines overlapping visually.
+1. Interactive visualisation allows users to drill and narrow down into the specific variable or period of time to allow them to observe the changes to relationships between variables over time. For the case of the correlation plot, the way to compare the correlation between different variables and across different time periods on static plots are to generate correlation plots of every individual variables and years combination. With interactive visualisation, the number of such plots could be reduce to just one.
+1. There is no one-size-fits-all EDA visualisation. Rather than controlling what users to could see in static visualisation, interactive visualisation provides users the flexibility to customise the visualisation they would like to see.
+
+
+
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
