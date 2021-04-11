@@ -160,6 +160,15 @@ ggplot(H, aes(GHG_emissions))+
 Since the independent variables are of continuous data type, to review the trend overtime, the *ggplot* function of ggplot2 package is used along with *geom_line* to plot the line graph.
 
 ```{r echo= TRUE, message=TRUE, warning=FALSE, layout="l-body-outset", fig.width=8, fig.height=5}
+t <- ggplot(G, aes(x=Year, y=GHG_emissions)) +
+  geom_line()+
+  facet_wrap(~ Country)
+t
+```
+
+Having all countries included in a single plot.
+
+```{r echo= TRUE, message=TRUE, warning=FALSE, layout="l-body-outset", fig.width=8, fig.height=5}
 t <- ggplot(G, aes(x=Year, y=GHG_emissions, color=Country)) +
   geom_line()
 t
@@ -248,7 +257,7 @@ ggcorrmat(data = M)
 prepare_correlation_graph(M)
 ```
 
-Comparing the correlation plots above, it is clear that *ggcormat()* of ggstateplot package and *prepare_correlation_graph()* function of ExPanDaR package are more robust as they are able to generate correlation plot of dataset with missing values, which is suitable for the panel data project as the dataset has a small number of missing values. A downside of the plot from *prepare_correlation_graph()* is that it returns the dataframe below the plot that cannot be disabled. Therefore, the *ggcormat()* plot is preferred as it has the correlation coefficients embedded within the visualisation, and those variables pairs that are non-significant at ρ < 0.05 are also crossed out
+Comparing the correlation plots above, it is clear that *ggcormat()* of ggstateplot package and *prepare_correlation_graph()* function of ExPanDaR package are more robust as they are able to generate correlation plot of dataset with missing values, which is suitable for the panel data project as the dataset has a small number of missing values. A downside of the plot from *prepare_correlation_graph()* is that it returns the dataframe below the plot that cannot be disabled. Therefore, the *ggcormat()* plot is preferred as it has the correlation coefficients embedded within the visualisation, and those variables pairs that are statistically insignificant at ρ < 0.05 are also crossed out
 
 ## Bivariate Analysis with Scatterplot
 
